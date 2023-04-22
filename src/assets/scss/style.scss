@@ -1,0 +1,53 @@
+@import 'vendor/reset';
+@import 'blocks/vars';
+@import 'mixins';
+
+
+
+@import 'fonts';
+@import 'settings';
+
+
+html,body{
+  font-size: 10px;
+  height: 100%;
+}
+
+.main{
+  height: 100%;
+  flex: 1 0 auto; 
+}
+
+/* Работает в Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgba(20, 16, 36, 0.08);
+    border-radius: 40px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #141024;
+    border-radius: 40px;
+    // border: 3px solid orange;
+  }
+// =============scrollbar=============
+
+
+
+
+
+// ======blocks=========
+
+@import 'blocks/container';
+@import 'blocks/page';
+@import 'blocks/header';
+@import 'blocks/footer';
+
+
+
+
+
+
