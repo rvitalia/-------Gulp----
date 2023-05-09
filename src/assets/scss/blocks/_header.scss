@@ -1,11 +1,33 @@
-header{
-    text-align: center;
-    width: 100%;
-    font-size: 3rem;
-    color: blue;
-    padding: 10rem 0;
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #FF0000;
 }
-a{
-    font-family: 'caveat',scursiv;
-    font-weight: 700;
+
+.header__inner__logo {
+    margin: 1.1rem 0;
+    max-width: 9.4rem;
+    max-height: 4.8rem;
+}
+
+.header__inner__menu {
+    width: 100%;
+    max-width: 45.7rem;
+}
+
+.header__inner__menu>ul {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #747474;
+    transition: all 0.4s linear;
+}
+
+.header__inner__menu>ul>li>a:hover {
+    color: #4258A2;
 }
