@@ -161,6 +161,7 @@ function js(cb) {
             entry: {
                 app: './src/assets/js/firstpage/app.js',
                 main: './src/assets/js/secondpage/main.js',
+                object: './src/assets/js/object/object.js',
             },
             output: {
                 filename: '[name].js',
@@ -202,6 +203,7 @@ function jsWatch(cb) {
             entry: {
                 app: './src/assets/js/firstpage/app.js',
                 main: './src/assets/js/secondpage/main.js',
+                object: './src/assets/js/object/object.js',
             },
             output: {
                 filename: '[name].js',

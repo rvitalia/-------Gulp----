@@ -1,34 +1,40 @@
+---
+layout: second
+title: Document | Home
+---
+
+
 <section class="order">
     <div class="container">
         <div class="order__inner">
             <h3 class="order__inner__title">Детали заказа</h3>
             <form action="">
                 <div class="order__inner__row">
-                    <label class="order__inner__row__label" for="">
-                        <input type="text">
+                    <label class="order__inner__row__label" for="name">Имя:
+                        <input type="text" id="name" placeholder="Обязательно для заполнения*" required>
                     </label>
-                    <label class="order__inner__row__label" for="">
-                        <input type="text">
-                    </label>
-                </div>
-                <div class="order__inner__row">
-                    <label class="order__inner__row__label" for="">
-                        <input type="text">
+                    <label class="order__inner__row__label" for="surname">Фамилия:
+                        <input type="text" id="surname" placeholder="Обязательно для заполнения*" required>
                     </label>
                 </div>
                 <div class="order__inner__row">
-                    <label class="order__inner__row__label" for="">
-                        <input type="text">
+                    <label class="order__inner__row__label long" for="namedcompany">Название компании
+                        <input type="text" id="namedcompany">
                     </label>
-                    <label class="order__inner__row__label" for="">
-                        <input type="text">
+                </div>
+                <div class="order__inner__row">
+                    <label class="order__inner__row__label" for="contacts">Контакты заказчика:
+                        <input type="text" id="contacts" placeholder="Номер телефона*" required>
+                    </label>
+                    <label class="order__inner__row__label hidden" for="email">Контакты заказчика:
+                        <input type="text" id="email" placeholder="Email*" required>
                     </label>
                 </div>
                 <div class="order__inner__row">
                     <span class="order__inner__row__text">Ваши личные данные будут использованы для обработки ваших
                         заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей <a
                             href="">политике конфиденциальности</a></span>
-                    <button type="submit" Отправить Анкету</button>
+                    <button type="submit" class="order__inner__row__button">Отправить Анкету</button>
                 </div>
             </form>
         </div>

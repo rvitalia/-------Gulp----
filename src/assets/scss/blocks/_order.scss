@@ -1,0 +1,90 @@
+.order {}
+
+.order__inner {}
+
+.order__inner__title {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 100%;
+    padding: 9.6rem 0 12.9rem;
+}
+
+.order__inner__row {
+    display: flex;
+    justify-content: space-between;
+}
+.order__inner__row:last-child{
+    margin-bottom: 7.2rem;
+}
+
+.order__inner__row__label {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 55px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 63.5rem;
+    margin-bottom: 7.3rem;
+}
+
+.order__inner__row__label>input:active,
+.order__inner__row__label>input:focus {
+    outline: none;
+}
+
+.hidden {
+    color: white;
+}
+.long{
+    max-width: 144.6rem;
+}
+
+.order__inner__row__label>input {
+    display: block;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 3.6rem;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.order__inner__row__text {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    max-width: 102.4rem;
+}
+
+.order__inner__row__text>a {
+    color: #2DBE96;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.order__inner__row__button {
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 1.8rem 9.7rem;
+    transition: all 0.3s linear;
+    max-height: 64px;
+}
+
+.order__inner__row__button:hover{
+    background-color: black;
+    color: white;
+}
