@@ -1,6 +1,8 @@
 @import 'vendor/reset';
 @import 'blocks/vars';
 @import 'mixins';
+@import '../../../node_modules/swiper/swiper-bundle';
+
 
 
 
@@ -35,7 +37,9 @@ html,body{
   }
 // =============scrollbar=============
 
-
+._lock{
+  overflow: hidden;
+}
 
 
 
@@ -47,6 +51,9 @@ html,body{
 @import 'blocks/hero';
 @import 'blocks/about';
 @import 'blocks/services';
+@import 'blocks/statement';
+@import 'blocks/modalCallback';
+@import 'blocks/order';
 @import 'blocks/footer';
 
 

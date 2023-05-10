@@ -1,0 +1,164 @@
+.modalcallback {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0);
+    transition: all 0.3s linear;
+
+    width: 100%;
+    height: 100%;
+    max-width: 697px;
+    max-height: 565.77px;
+
+    background: #FFFFFF;
+    border: 1px solid #466BF8;
+    border-radius: 20px;
+}
+
+.modalcallback.active__popuptel {
+    display: block;
+}
+
+.modalcallback__close {
+    display: block;
+    width: 2.9rem;
+    height: 2.9rem;
+    margin: 1.6rem 1.6rem 1.4rem auto;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: all 0.3s linear;
+}
+
+.modalcallback__close:hover {
+    opacity: 1;
+    // transform: rotate(90deg);
+}
+
+.containersmall {
+    width: 100%;
+    max-width: 57.9rem;
+    margin: 0 auto;
+}
+
+.modalcallback__inner {
+    padding: 0 0 2.677rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalcallback__inner__title {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    padding-bottom: 5rem;
+    color: #466BF8;
+}
+
+.modalcallback__inner__input {
+    border: 1px solid #466BF8;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 48.5rem;
+    margin: 0 auto 2rem;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.modalcallback__inner__input::placeholder {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    color: rgba(70, 107, 248, 0.3);
+}
+
+.modalcallback__inner__input+.modalcallback__inner__input {
+    margin-bottom: 1.6rem;
+}
+
+.modalcallback__inner__selecting {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #466BF8;
+    padding-bottom: 1.6rem;
+}
+
+.modalcallback__inner>form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 36.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalcallback__inner__box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3.1rem;
+}
+
+.modalcallback__inner__box__item {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #9A9CA5;
+    cursor: pointer;
+}
+
+.modalcallback__inner__box__item>input{
+    cursor: pointer;
+}
+
+.modalcallback__inner__form__button {
+    max-width: 309px;
+    font-family: 'Viga';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.045em;
+    color: #FFFFFF;
+    padding: 1.9rem 7.2rem 2rem;
+    background: #466BF8;
+    border-radius: 50px;
+    border: 1px solid #466BF8;
+    margin-bottom: 1.6rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.modalcallback__inner__form__button:hover{
+    color: #466BF8;
+    background-color: white;
+}
+
+.modalcallback__inner__politics {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #466BF8;
+}

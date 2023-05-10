@@ -1,4 +1,61 @@
-footer{
+footer {
     width: 100%;
     flex: 0 0 auto;
+}
+
+.footer__inner {
+    border-top: 1px solid #D9D9D9;
+    padding-top: 3.9rem;
+    padding-bottom: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__inner__both {
+    width: 100%;
+    max-width: 16.9rem;
+}
+
+.footer__inner__both__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer__inner__both__menu__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer__inner__both__menu__row + .footer__inner__both__menu__row {
+    padding-top: 1.6rem;
+}
+
+.footer__inner__both__menu__row>li>a {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #272727;
+    text-align: left;
+}
+
+.footer__inner__center {
+    width: 94px;
+    height: 48px;
+}
+
+.footer__inner__both__link +.footer__inner__both__link {
+    margin-left: 4.1rem;
+}
+.footer__inner__both__link{
+    width: 4.8rem;
+    height: 4.8rem;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.6;
+}
+
+.footer__inner__both__link:hover{
+    opacity: 1;
 }
