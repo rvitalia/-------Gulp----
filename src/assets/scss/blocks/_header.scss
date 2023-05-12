@@ -9,11 +9,19 @@
     margin: 1.1rem 0;
     max-width: 9.4rem;
     max-height: 4.8rem;
+
+    @include burger-header{
+        display: none;
+    }
 }
 
 .header__inner__menu {
     width: 100%;
     max-width: 45.7rem;
+
+    @include burger-header{
+        display: none;
+    }
 }
 
 .header__inner__menu>ul {
@@ -30,4 +38,51 @@
 
 .header__inner__menu>ul>li>a:hover {
     color: #4258A2;
+}
+
+.burger__menu{
+    display: none;
+    margin: 3.25rem 0 1.85rem 3.25rem;
+    cursor: pointer;
+
+    @include burger-header{
+        display: block;
+    }
+}
+
+.burger__menu__item{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-200%);
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    background-color: white;
+    color: #4258A2;
+}
+
+.burger__menu__item>ul>li{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 2;
+}
+
+.burger__menu__item.burger-active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.burger__menu__item>img{
+    display: block;
+    margin-left: auto;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
 }

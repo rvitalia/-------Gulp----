@@ -1,9 +1,11 @@
 <header>
     <div class="container">
         <div class="header__inner">
-            <picture class="header__inner__logo">
-                <img src="./assets/images/header/logo.svg" alt="logo-creative">
-            </picture>
+            <a href="./index.html" class="header__inner__logo">
+                <picture>
+                    <img src="./assets/images/header/logo.svg" alt="logo-creative">
+                </picture>
+            </a>
             <nav class="header__inner__menu">
                 <ul>
                     <li><a href="./index.html">Главная</a></li>
@@ -12,6 +14,19 @@
                     <li><a href="./index.html#">Портфолио</a></li>
                 </ul>
             </nav>
+            <div class="burger__menu">
+                <img src="./assets/images/svg/Vector.svg" id="burger" alt="burger">
+                <div class="burger__menu__item" id="menu__burger">
+                    <img src="./assets/images/svg/close.svg" data-close alt="close">
+                    <ul>
+                        <li><a href="./index.html" data-select>Главная</a></li>
+                        <li><a href="./index.html#aboutUS" data-select>О нас</a></li>
+                        <li><a href="./index.html#services" data-select>Услуги</a></li>
+                        <li><a href="./index.html#" data-select>Портфолио</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </header>

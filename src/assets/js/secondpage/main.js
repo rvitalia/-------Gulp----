@@ -1,1 +1,4 @@
-console.log('main.js');
+import { burger } from "../firstpage/burger";
+
+
+burger();

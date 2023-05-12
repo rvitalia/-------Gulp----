@@ -1,4 +1,5 @@
 import Swiper, {Navigation, Pagination} from "swiper";
+import { burger } from "../firstpage/burger";
 
 
 const swiper = new Swiper('.swiper-object', {
@@ -46,3 +47,5 @@ function addContainer (item){
 
 addContainer('header');
 addContainer('footer');
+
+burger();

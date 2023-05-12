@@ -7,6 +7,10 @@
     max-height: 600px;
     background: #466BF8;
     border-radius: 0px 0px 100px 100px;
+
+    @include mobile {
+        border-radius:  0;
+    }
 }
 
 .statement__inner__title {
@@ -21,6 +25,35 @@
     padding: 9.9rem 0 12.8rem;
     max-width: 120rem;
     margin: 0 auto;
+
+    @include for-desktop{
+        font-size: 8rem;
+        max-width: 80rem;
+    }
+
+    @include tablet{
+        font-size: 6rem;
+        max-width: 60rem;
+        padding: 5rem 0 7rem;
+    }
+
+    @include small-tablet{
+        font-size: 5rem;
+        max-width: 50rem;
+        padding: 4rem 0 5rem;
+        line-height: 1.8;
+    }
+
+    @include burger-header{
+        font-size: 4rem;
+        line-height: 1.5;
+    }
+
+    @include mobile{
+        font-size: 3rem;
+        max-width: 30rem;
+        line-height: 1.2;
+    }
 }
 
 .statement__inner__bottom {
@@ -30,6 +63,15 @@
     justify-content: space-between;
     margin: 0 auto;
     padding-bottom: 11.5rem;
+    
+    @include small-tablet{
+        padding-bottom: 6rem;
+        max-width: 35rem;
+    }
+
+    @include mobile{
+        max-width: 26rem;
+    }
 }
 
 .statement__inner__bottom__buttom {
@@ -46,6 +88,13 @@
     border-radius: 26px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+
+@include mobile{
+    font-size: 1.3rem;
+    padding: 0.8rem 1rem;
+    width: 11rem;
+    text-align: center;
+}
 }
 .statement__inner__bottom__buttom:hover{
     background-color: transparent;
@@ -61,6 +110,10 @@
     text-transform: uppercase;
     color: #FFFFFF;
     background-color: transparent;
+
+    @include mobile{
+        font-size: 1.3rem;
+    }
 }
 .statement__inner__bottom__buttom:nth-child(2):hover{
     background-color: white;
