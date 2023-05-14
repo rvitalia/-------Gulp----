@@ -36,7 +36,12 @@
     border-radius: 26px;
     padding: 0.5rem 4.7rem;
     background-color: transparent;
-    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.active__tabs.services__inner__gallery__buttons__button{
+    color: rgba(70, 107, 248, 1);
+    border: 1px solid rgba(70, 107, 248, 1);
 }
 
 .services__inner__gallery__line {

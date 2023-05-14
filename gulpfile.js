@@ -157,7 +157,7 @@ function js(cb) {
         //.pipe(webpack(require('./webpack.config.js')))
         .pipe(sourcemaps.init())
         .pipe(webpackStream({
-            mode: "production",
+            mode: "development",
             entry: {
                 app: './src/assets/js/firstpage/app.js',
                 main: './src/assets/js/secondpage/main.js',
@@ -199,7 +199,7 @@ function jsWatch(cb) {
         .pipe(sourcemaps.init())
         //.pipe(webpack(require('./webpack.config.js')))
         .pipe(webpackStream({
-            mode: "production",
+            mode: "development",
             entry: {
                 app: './src/assets/js/firstpage/app.js',
                 main: './src/assets/js/secondpage/main.js',

@@ -8,26 +8,26 @@ title: Document | Home
     <div class="container">
         <div class="order__inner">
             <h3 class="order__inner__title">Детали заказа</h3>
-            <form action="">
+            <form action="#" class="form__order" id="form__order" method="post" autocomplete="off">
                 <div class="order__inner__row">
                     <label class="order__inner__row__label" for="name">Имя:
-                        <input type="text" id="name" placeholder="Обязательно для заполнения*" required>
+                        <input class="input-name" data-validate-field="name" type="text" id="name" name="name" placeholder="Обязательно для заполнения*" required>
                     </label>
                     <label class="order__inner__row__label" for="surname">Фамилия:
-                        <input type="text" id="surname" placeholder="Обязательно для заполнения*" required>
+                        <input class="input-surname" data-validate-field="surname" type="text" name="surname" id="surname" placeholder="Обязательно для заполнения*" required>
                     </label>
                 </div>
                 <div class="order__inner__row">
                     <label class="order__inner__row__label long" for="namedcompany">Название компании
-                        <input type="text" id="namedcompany">
+                        <input type="text" id="namedcompany" data-validate-field="name" name="company">
                     </label>
                 </div>
                 <div class="order__inner__row">
                     <label class="order__inner__row__label" for="contacts">Контакты заказчика:
-                        <input type="text" id="contacts" placeholder="Номер телефона*" required>
+                        <input class="input-tel" type="tel" data-validate-field="tel" name="tel" id="contacts" placeholder="Номер телефона*" required>
                     </label>
                     <label class="order__inner__row__label hidden" for="email">Контакты заказчика:
-                        <input type="text" id="email" placeholder="Email*" required>
+                        <input class="input-mail" type="email" data-validate-field="email" name="email" id="email" placeholder="Email*" required>
                     </label>
                 </div>
                 <div class="order__inner__row">

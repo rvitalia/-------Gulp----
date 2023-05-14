@@ -39,6 +39,11 @@
     "dependencies": {
         "gulp-sourcemaps": "^3.0.0",
         "gulp-ttf-to-woff": "^1.0.3",
-        "swiper": "^9.3.0"
+        "html5-form-validator": "^2.0.0",
+        "inputmask": "^5.0.7",
+        "jquery": "^3.7.0",
+        "just-validate": "^4.2.0",
+        "swiper": "^9.3.0",
+        "ymaps": "^0.2.1"
     }
 }

@@ -35,8 +35,9 @@ title: Document | Home
                 <span class="about__inner__content__text">
                     <p>
                         РА Креатив один из крупных операторов г. Пскова свою деятельность ведем с 1997 г. Являемся
-                    собственником рекламных конструкций и экспертами в наружной рекламе. У нас достаточно гибкий подход
-                    к каждому клиенту.
+                        собственником рекламных конструкций и экспертами в наружной рекламе. У нас достаточно гибкий
+                        подход
+                        к каждому клиенту.
                     </p>
 
                     <p><span>Основная наша деятельность</span></p>
@@ -61,9 +62,11 @@ title: Document | Home
 
 
                 <div class="services__inner__gallery__buttons">
-                    <button type="button" data-filter=".city">CITY-BANNER</button>
-                    <button type="button" data-filter=".bilbord">BILBORD</button>
-                    <button type="button" data-filter=".big">BIG SCREEN</button>
+                    <button type="button" class="services__inner__gallery__buttons__button"
+                        data-filter=".city">CITY-BANNER</button>
+                    <button type="button" class="services__inner__gallery__buttons__button"
+                        data-filter=".bilbord">BILBORD</button>
+                    <button type="button" class="services__inner__gallery__buttons__button" data-filter=".big">BIG SCREEN</button>
                 </div>
 
                 <hr class="services__inner__gallery__line">
@@ -75,7 +78,7 @@ title: Document | Home
 
 
                         <!-- Slides -->
-                        
+
 
                     </div>
                     <!-- If we need pagination -->
@@ -83,10 +86,10 @@ title: Document | Home
 
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev">
-                        <img src="./assets/images/services/arrowleft.svg" alt="arrow">
+                        <img src="./assets/images/services/arrowleft.svg" alt="arrow" data-arrow>
                     </div>
                     <div class="swiper-button-next">
-                        <img src="./assets/images/services/arrowright.svg" alt="arrow">
+                        <img src="./assets/images/services/arrowright.svg" alt="arrow" data-arrow>
                     </div>
 
                 </div>
@@ -105,7 +108,7 @@ title: Document | Home
                 Заявите о себе вместе с нами
             </h2>
             <div class="statement__inner__bottom">
-                <a href="./order.html" class="statement__inner__bottom__buttom">Заказать</a>
+                <a href="./order.php" class="statement__inner__bottom__buttom">Заказать</a>
                 <button class="statement__inner__bottom__buttom" data-modalcallback>связаться</button>
             </div>
         </div>
@@ -117,12 +120,19 @@ title: Document | Home
     <div class="containersmall">
         <div class="modalcallback__inner">
             <h3 class="modalcallback__inner__title">Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
+            <form action="#" class="form" id="form" method="post" data-formcall autocomplete="off">
+                <label class="label__attention">
+                    <input type="text" autocomplete="off" name="name" class="modalcallback__inner__input input-name"
+                        id="name" data-validate-field="name" placeholder="Ваше имя" required>
 
-            <input type="text" class="modalcallback__inner__input" placeholder="Ваше имя">
-            <input type="text" class="modalcallback__inner__input" placeholder="Ваш номер телефона">
+                </label>
+                <label class="label__attention">
+                    <input type="tel" autocomplete="off" name="tel" class="modalcallback__inner__input input-tel"
+                        id="tel" data-validate-field="tel" placeholder="Ваш номер телефона" required>
 
-            <span class="modalcallback__inner__selecting">Выберите подходящий способ связи</span>
-            <form action="">
+                </label>
+                <span class="modalcallback__inner__selecting">Выберите подходящий способ связи</span>
+
                 <div class="modalcallback__inner__box">
                     <label for="call" class="modalcallback__inner__box__item">
                         <input type="radio" id="call" name="callback" value="call"> Позвонить

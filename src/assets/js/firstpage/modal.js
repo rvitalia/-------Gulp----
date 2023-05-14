@@ -1,3 +1,4 @@
+import { validation } from "./validation";
 
 export function modalCallOpen() {
     function modalOpen() {
@@ -20,9 +21,14 @@ export function modalCallOpen() {
             popuptel.style.opacity = '1';
         }, 400)
     }
+
     let buttonCallback = document.querySelector('[data-modalcallback]');
     buttonCallback.addEventListener('click', () => {
         modalOpen();
+        setTimeout(()=>{
+            //валидация и отправка на почту
+        validation();
+        },150);
     })
 }
 
@@ -31,6 +37,7 @@ function removeClass(parent) {
     parent.style.opacity = '0';
     const body = document.querySelector('body');
     let fixwindow = document.querySelectorAll('.fix__block');
+    console.log(parent);
 
     setTimeout(function () {
         parent.classList.remove('active__popuptel');
@@ -46,10 +53,10 @@ function removeClass(parent) {
 
 export function modalCallCancel() {
     const popuptel = document.querySelector('.modalcallback');
-    const cancel = document.querySelector('[data-close]');
+    const cancel = document.querySelector('.modalcallback__close');
     const body = document.querySelector('body');
     cancel.addEventListener('click', () => {
-        removeClass(popuptel);        
+        removeClass(popuptel);
     })
 }
 

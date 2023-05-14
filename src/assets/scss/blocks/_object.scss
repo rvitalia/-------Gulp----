@@ -52,9 +52,11 @@
 .swiper-slide__object {
     max-width: 1152px;
     max-height: 563px;
+    // height: calc($index*30);
     border: 1px solid #466BF8;
     border-radius: 10px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .swiper-slide__object__img>img {

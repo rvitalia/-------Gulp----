@@ -3,6 +3,7 @@ import { burger } from "./burger";
 import { loadData } from "./load&renderdata";
 import { modalCallCancel, modalCallOpen } from "./modal";
 
+
 export function swiperSlider() {
     const swiper = new Swiper('.swiper__services', {
         // Optional parameters
@@ -51,3 +52,8 @@ burger();
 
 //загрузка данных Json
 loadData();
+
+
+
+
+

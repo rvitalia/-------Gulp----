@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
     max-width: 697px;
-    max-height: 565.77px;
+    max-height: 602.77px;
 
     background: #FFFFFF;
     border: 1px solid #466BF8;
@@ -58,6 +58,13 @@
     text-align: center;
     padding-bottom: 5rem;
     color: #466BF8;
+}
+
+.label__attention {
+    width: 100%;
+    max-width: 48.5rem;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .modalcallback__inner__input {
@@ -127,7 +134,7 @@
     cursor: pointer;
 }
 
-.modalcallback__inner__box__item>input{
+.modalcallback__inner__box__item>input {
     cursor: pointer;
 }
 
@@ -148,7 +155,7 @@
     transition: all 0.3s linear;
 }
 
-.modalcallback__inner__form__button:hover{
+.modalcallback__inner__form__button:hover {
     color: #466BF8;
     background-color: white;
 }
@@ -161,4 +168,9 @@
     text-align: center;
     letter-spacing: -0.04em;
     color: #466BF8;
+    padding-bottom: 2rem;
+}
+
+.just-validate-error-label {
+    font-size: 1.5rem;
 }
