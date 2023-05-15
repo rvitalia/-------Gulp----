@@ -1,40 +1,43 @@
-import ymaps from "ymaps";
+// import ymaps from 'ymaps';
 
-export function addPlacemark(item) {
+export function Ymapsinit(object) {
 
-    let dataCoordinate = item.maps;
-    let fullname = item.title;
+
+    let cordinate = object.maps;
+    let fullname = object.title;
     let name = fullname.split('.');
+    let title = name[0];
+    let array = [];    
+
+    //создаем массив и переводим в числовое значение избавляясь от кавычек
+    let data = cordinate.split(',');
+    array[0] = Number(data[0]);
+    array[1] = Number(data[1]);
 
 
-
-
-    ymaps
-        .load()
-        .then(maps => {
-            const map = new maps.Map('YMapsID', {
-                center: [57.82, 28.33],
-                zoom: 12
-            });
+    function init() {
+        let map = new ymaps.Map('map', {
+            center: array,
+            zoom: 16
         })
-        .catch(error => console.log('Failed to load Yandex Maps', error));
+        
+        let placemark = new ymaps.Placemark(array, {
+            iconContent: title,
+            //  balloonContentHeader: title,
+            // balloonContentBody: 'Боди',
+            // balloonContentFooter: 'Footer',
+        }, {
+            preset: "islands#blueStretchyIcon"
+        });
 
-    // Создает метку с банером
-    //  let placemark = new ymaps.Placemark(new ymaps.GeoPoint(dataCoordinate));
+        map.geoObjects.add(placemark);
+        // placemark.balloon.open();
+    }
 
 
 
 
-};
 
 
-
-    // Устанавливает содержимое балуна
-    //  placemark.name = name[0];
-    // placemark.description = "Столица Российской Федерации";
-
-    // Добавляет метку на карту
-    //  map.addOverlay(placemark);
-    // return dataCoordinate;
-
-// }
+    ymaps.ready(init);
+}   

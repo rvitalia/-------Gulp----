@@ -1,5 +1,5 @@
 import { swiperObject } from "../object/object";
-import { addPlacemark } from "../object/placemark";
+import { getCoordinate, Ymapsinit } from "../object/placemark";
 
 export function sendData() {
     let readMores = document.querySelectorAll('[data-object]');
@@ -26,10 +26,7 @@ export async function renderDataobject(Id) {
                 currentObject = element;
             }
         });
-        // console.log(currentObject);
-
-        // const mapMark = addPlacemark(currentObject);
-        // console.log(mapMark);
+      
 
         const objectPage = `
         <div class="container container-object">
@@ -50,7 +47,7 @@ export async function renderDataobject(Id) {
                             <!-- Slides -->
                             <div class="swiper-slide">
                                 <div class="swiper-slide__object">
-                                    <div id="YMapsID" class="YMapsID" style="width:100%; height:650px">
+                                    <div id="map" class="map" style="width:100%; height:650px">
                                     
                                     </div>
                                 </div>
@@ -101,7 +98,14 @@ export async function renderDataobject(Id) {
         </section>`;
 
         main.insertAdjacentHTML('beforeend', objectPage);
+
+        //инициализируем слайдер
         swiperObject();
+
+    
+
+        //отрисовываем карту
+        Ymapsinit(currentObject);
     }
 
 }
