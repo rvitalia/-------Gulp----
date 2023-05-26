@@ -2,6 +2,10 @@
 
 .about__inner {
     padding-bottom: 12.8rem;
+
+    @include tablet {
+        padding-bottom: 7rem;
+    }
 }
 
 .about__inner__title {
@@ -73,6 +77,7 @@
 
     @include small-tablet{
         font-size: 1.8rem;
+        text-align: justify;
     }
 
     @include mobile{
@@ -92,6 +97,6 @@
     text-align: left;
 
     @include tablet{
-        text-align: center;
+        text-align: left;
     }
 }

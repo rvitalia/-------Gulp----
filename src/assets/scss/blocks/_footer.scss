@@ -15,6 +15,10 @@ footer {
 .footer__inner__both {
     width: 100%;
     max-width: 16.9rem;
+
+    @include burger-header{
+        max-width: 12.9rem;
+    }
 }
 
 .footer__inner__both__menu {
@@ -49,18 +53,31 @@ footer {
 }
 
 .footer__inner__center {
-    width: 94px;
+    width: 98px;
     height: 48px;
+    display: flex;
+    align-items: center;
+
+    @include burger-header {
+        height: 3.5rem;
+        width: auto;
+    }
 }
 
 .footer__inner__both__link +.footer__inner__both__link {
     margin-left: 4.1rem;
 }
 .footer__inner__both__link{
+    display: inline-block;
     width: 4.8rem;
     height: 4.8rem;
     transition: all 0.3s ease-in-out;
     opacity: 0.6;
+
+    @include burger-header{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
 }
 
 .footer__inner__both__link:hover{

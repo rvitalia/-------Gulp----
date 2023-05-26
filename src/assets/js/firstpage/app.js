@@ -1,4 +1,5 @@
 import Swiper, { Navigation, Pagination } from "swiper";
+import { coloractive, disabledactive } from "./activeTabs";
 import { burger } from "./burger";
 import { loadData } from "./load&renderdata";
 import { modalCallCancel, modalCallOpen } from "./modal";
@@ -18,27 +19,44 @@ export function swiperSlider() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+    });
 
+    //смена слайдо при клике
 
-        // Responsive breakpoints
-        // breakpoints: {
-        //     // when window width is >= 320px
-        //     250: {
-        //         slidesPerView: 1,
-        //     },
-        //     // when window width is >= 480px
-        //     680: {
-        //         slidesPerView: 2,
-        //     },
-        //     // when window width is >= 640px
-        //     950: {
-        //         slidesPerView: 3,
+    let tabs = document.querySelectorAll('.services__inner__gallery__buttons__button');
 
-        //     },
-        //     1150: {
-        //         slidesPerView: 4,
-        //     }
-        // }
+    tabs.forEach(element => {
+        element.addEventListener('click', () => {
+            disabledactive();
+            if (window.innerWidth >= 900) {
+                if (element.dataset.filter == 'bilbord') {
+                    swiper.slideTo(1, 400, false);
+                    coloractive('BILBORD');
+                }
+                else if (element.dataset.filter == 'city') {
+                    swiper.slideTo(8, 400, false)
+                    coloractive('CITY-BANNER');
+                }
+                else if (element.dataset.filter == 'big') {
+                    swiper.slideTo(9, 400, false);
+                    coloractive('BIG SCREEN');
+                }
+            }
+            else {
+                if (element.dataset.filter == 'bilbord') {
+                    swiper.slideTo(1, 400, false);
+                    coloractive('BILBORD');
+                }
+                else if (element.dataset.filter == 'city') {
+                    swiper.slideTo(40, 400, false);
+                    coloractive('CITY-BANNER');
+                }
+                else if (element.dataset.filter == 'big') {
+                    swiper.slideTo(45, 400, false);
+                    coloractive('BIG SCREEN');
+                }
+            }
+        })
     });
 }
 
@@ -52,8 +70,5 @@ burger();
 
 //загрузка данных Json
 loadData();
-
-
-
 
 

@@ -1,4 +1,4 @@
-function coloractive(name){
+export function coloractive(name){
     let parentTabs = document.querySelector('.services__inner__gallery__buttons');
     let tabs = parentTabs.querySelectorAll('button');
     tabs.forEach(element => {
@@ -8,7 +8,7 @@ function coloractive(name){
     });
 }
 
-function disabledactive(){
+export function disabledactive(){
     let parentTabs = document.querySelector('.services__inner__gallery__buttons');
     let tabs = parentTabs.querySelectorAll('button');
     tabs.forEach(element => {

@@ -1,5 +1,8 @@
 .statement {
     padding-bottom: 12.8rem;
+    @include tablet{
+        padding-bottom: 6rem;
+    }
 }
 
 .statement__inner {
@@ -8,7 +11,7 @@
     background: #466BF8;
     border-radius: 0px 0px 100px 100px;
 
-    @include mobile {
+    @include small-tablet {
         border-radius:  0;
     }
 }
@@ -53,6 +56,7 @@
         font-size: 3rem;
         max-width: 30rem;
         line-height: 1.2;
+        padding: 3rem 0 4rem;
     }
 }
 
@@ -71,6 +75,7 @@
 
     @include mobile{
         max-width: 26rem;
+        padding-bottom: 3rem;
     }
 }
 
@@ -88,6 +93,14 @@
     border-radius: 26px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+
+    &:nth-child(1){
+        padding: 1rem 4.5rem;
+
+        @include mobile{
+            padding: 0.8rem 1rem;
+        }
+    }
 
 @include mobile{
     font-size: 1.3rem;

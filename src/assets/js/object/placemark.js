@@ -27,7 +27,7 @@ export function Ymapsinit(object) {
             // balloonContentBody: 'Боди',
             // balloonContentFooter: 'Footer',
         }, {
-            preset: "islands#blueStretchyIcon"
+            preset: "islands#redStretchyIcon"
         });
 
         map.geoObjects.add(placemark);

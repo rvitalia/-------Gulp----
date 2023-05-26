@@ -1,37 +1,90 @@
-.hero{
+.hero {
     padding-bottom: 12.8rem;
+
+    @include for-desktop {
+        padding-bottom: 5.8rem;
+    }
+
+    @include small-tablet {
+        padding-bottom: 2.8rem;
+    }
+
+    @include burger-header {
+        padding-bottom: 20rem;
+    }
 }
+
 .hero__inner {
     padding-top: 2.4rem;
     margin-bottom: 13rem;
+
+    @include for-desktop {
+        margin-bottom: 10rem;
+    }
+
+    @include small-tablet {
+        margin-bottom: 8rem;
+    }
+    @include burger-header{
+        margin-bottom: 25rem;
+    }
 }
 
 .hero__inner__img {
     display: flex;
     justify-content: space-between;
+
+    @include burger-header {
+        justify-content: center;
+    }
 }
 
 .hero__inner__img__item:nth-child(1) {
     max-width: 621px;
     max-height: 800px;
+
+    @include for-desktop {
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: cover;
+    }
 }
 
 .hero__inner__img__item:nth-child(2) {
     max-width: 887px;
     max-height: 800px;
+
+    @include for-desktop {
+        display: none;
+    }
 }
-.hero__inner__img__item>img{
+
+.hero__inner__img__item>img {
     object-fit: cover;
 }
 
-.hero__inner__info{
+.hero__inner__info {
     margin-top: -40rem;
     padding-left: 4.8rem;
     display: flex;
     flex-direction: column;
 
-    @include for-desktop{
-    margin-top: -32rem;
+    @include for-desktop {
+        margin-top: -32rem;
+    }
+
+    @include small-tablet {
+        margin-top: -25rem;
+    }
+
+    @include burger-header {
+        width: 100%;
+        max-width: 43rem;
+        margin: -34rem auto;
+    }
+    @include mobile{
+        padding-left: 2rem;
     }
 }
 
@@ -45,17 +98,20 @@
     text-transform: uppercase;
     color: #FFFFFF;
 
-    @include for-desktop{
+    @include for-desktop {
         font-size: 5.6rem;
     }
 
-    @include tablet{
+    @include tablet {
         font-size: 4.9rem;
     }
 
-    @include small-tablet{
+    @include small-tablet {
         font-size: 4.1rem;
         line-height: 1.3;
+    }
+    @include small-mobile{
+        font-size: 3.5rem;
     }
 }
 
@@ -69,14 +125,18 @@
     color: rgba(255, 255, 255, 0.75);
     margin-bottom: 4.8rem;
 
-    @include for-desktop{
-    font-size: 2rem;
+    @include for-desktop {
+        font-size: 2rem;
     }
 
-    @include tablet{
+    @include tablet {
         font-size: 1.8rem;
+        margin-bottom: 2rem;
     }
 
+    @include small-mobile{
+        max-width: 30rem;
+    }
 }
 
 .hero__inner__order {
@@ -85,7 +145,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 42px;
     color: #FFFFFF;
     background-color: transparent;
     transition: all 0.3s linear;
@@ -94,22 +154,25 @@
     max-width: 235px;
     height: 48px;
     cursor: pointer;
+    text-align: center;
 
-    @include for-desktop{
+    @include for-desktop {
         font-size: 2rem;
         height: 4rem;
+        line-height: 36px;
     }
 
-    @include tablet{
+    @include tablet {
         font-size: 1.8rem;
         height: 3.8rem;
         max-width: 20rem;
+        line-height: 32px;
     }
 
 
 }
 
-.hero__inner__order:hover{
+.hero__inner__order:hover {
     background-color: white;
     color: black;
 }

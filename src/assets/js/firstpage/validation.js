@@ -8,7 +8,7 @@ export function validation() {
     const inputMask = new Inputmask('+7 (999) 999-99-99');
     inputMask.mask(telSelector);
 
-
+    const close = document.querySelector('[data-close]');
 
     const validation = new JustValidate('.form');
 
@@ -56,6 +56,9 @@ validation
         if (xhr.status === 200) {
           console.log('Отправлено');
           alert('Форма успешно отправлена');
+          setTimeout(()=>{
+            close.click();
+          },2000)
         }
       }
     }

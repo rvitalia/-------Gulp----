@@ -1,12 +1,14 @@
 ---
 layout: default
-title: Document | Home
+title: Разработка, изготовление и размещение наружной рекламы на билбордах и сити-форматах в Пскове и Псковской области - Рекламное агентство Креатив
 ---
 <section class="hero">
     <div class="container">
         <div class="hero__inner">
             <div class="hero__inner__img">
                 <picture class="hero__inner__img__item">
+                    <source media="(min-width: 651px) and (max-width: 1150px)" srcset="./assets/images/hero/tablet.jpg" alt="tablet-hero" >
+                    <source media="(min-width: 200px) and (max-width: 650px)" srcset="./assets/images/hero/bg-color.png" alt="mobile-hero">
                     <img src="./assets/images/hero/Left.jpg" alt="main-image">
                 </picture>
                 <picture class="hero__inner__img__item">
@@ -17,7 +19,7 @@ title: Document | Home
                 <h1 class="hero__inner__title">Больше,<p>Чем просто реклама</p>
                 </h1>
                 <span class="hero__inner__subtitle">Занимаемся запуском рекламы в Пскове и Псоквской области</span>
-                <button class="hero__inner__order">Сделать заказ</button>
+                <a href="./order.php" class="hero__inner__order">Сделать заказ</a>
             </div>
         </div>
     </div>
@@ -63,10 +65,10 @@ title: Document | Home
 
                 <div class="services__inner__gallery__buttons">
                     <button type="button" class="services__inner__gallery__buttons__button"
-                        data-filter=".city">CITY-BANNER</button>
+                        data-filter="city">CITY-BANNER</button>
                     <button type="button" class="services__inner__gallery__buttons__button"
-                        data-filter=".bilbord">BILBORD</button>
-                    <button type="button" class="services__inner__gallery__buttons__button" data-filter=".big">BIG SCREEN</button>
+                        data-filter="bilbord">BILBORD</button>
+                    <button type="button" class="services__inner__gallery__buttons__button" data-filter="big">BIG SCREEN</button>
                 </div>
 
                 <hr class="services__inner__gallery__line">
@@ -115,7 +117,7 @@ title: Document | Home
     </div>
 </section>
 
-<div class="modalcallback fix__block">
+<div class="modalcallback fix__block" id="callback">
     <img src="./assets/images/svg/close.svg" alt="close" class="modalcallback__close" data-close>
     <div class="containersmall">
         <div class="modalcallback__inner">

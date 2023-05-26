@@ -47,24 +47,20 @@ export async function renderDataobject(Id) {
                             <!-- Slides -->
                             <div class="swiper-slide">
                                 <div class="swiper-slide__object">
-                                    <div id="map" class="map" style="width:100%; height:650px">
+                                    <div id="map" class="map">
                                     
                                     </div>
                                 </div>
         
                             </div>
                             <div class="swiper-slide">
-                                <div class="swiper-slide__object">
-                                    <picture class="swiper-slide__object__img">
-                                        <img src="./assets/images/object/${currentObject.foto1}" alt="${currentObject.name}">
-                                    </picture>
+                                <div class="swiper-slide__object"  style="background-image: url(./assets/images/object/${currentObject.foto1});">
+                                 
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="swiper-slide__object">
-                                    <picture class="swiper-slide__object__img">
-                                        <img src="./assets/images/object/${currentObject.foto2}" alt="${currentObject.name}">
-                                    </picture>
+                                <div class="swiper-slide__object"  style="background-image: url(./assets/images/object/${currentObject.foto2});">
+                                  
                                 </div>
                             </div>
         
@@ -72,14 +68,6 @@ export async function renderDataobject(Id) {
                         </div>
                         <!-- If we need pagination -->
                         <div class="swiper-pagination"></div>
-        
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev">
-                            <img src="./assets/images/services/arrowleft.svg" alt="arrow">
-                        </div>
-                        <div class="swiper-button-next">
-                            <img src="./assets/images/services/arrowright.svg" alt="arrow">
-                        </div>
         
                     </div>
                 </div>
@@ -92,7 +80,7 @@ export async function renderDataobject(Id) {
                     <h2 class="object__inner__title">${currentObject.title}</h2>
                     <span class="object__inner__text">${currentObject.text}</span>
         
-                    <a href="./order.html" class="object__inner__link">Сделать заказ</a>
+                    <a href="./order.php" class="object__inner__link">Сделать заказ</a>
                 </div>
             </div>
         </section>`;

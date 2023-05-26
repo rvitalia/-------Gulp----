@@ -42,7 +42,7 @@
 
 .burger__menu{
     display: none;
-    margin: 3.25rem 0 1.85rem 3.25rem;
+    margin: 3.25rem 0 1.85rem 1.75rem;
     cursor: pointer;
 
     @include burger-header{
@@ -59,7 +59,7 @@
     left: 0;
     transform: translateX(-200%);
     transition: all 0.3s ease-in-out;
-    z-index: 1;
+    z-index: 10;
     background-color: white;
     color: #4258A2;
 }

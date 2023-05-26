@@ -16,6 +16,15 @@
     background: #FFFFFF;
     border: 1px solid #466BF8;
     border-radius: 20px;
+
+    @include burger-header{
+        max-width: 45rem;
+        height: auto;
+    }
+
+    @include mobile{
+        max-width: 38rem;
+    }
 }
 
 .modalcallback.active__popuptel {
@@ -58,6 +67,16 @@
     text-align: center;
     padding-bottom: 5rem;
     color: #466BF8;
+
+    @include burger-header{
+        font-size: 2.6rem;
+        line-height: 1.4;
+        padding: 0 1rem 3rem;
+    }
+
+    @include mobile{
+        font-size: 2rem;
+    }
 }
 
 .label__attention {
@@ -79,6 +98,15 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
+
+    @include burger-header{
+        padding: 1rem;
+        width: 90%;
+    }
+
+    @include mobile{
+        width: 80%;
+    }
 }
 
 .modalcallback__inner__input::placeholder {
@@ -122,6 +150,10 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 3.1rem;
+
+    @include mobile{
+        max-width: 28rem;
+    }
 }
 
 .modalcallback__inner__box__item {
@@ -132,6 +164,10 @@
     line-height: 160%;
     color: #9A9CA5;
     cursor: pointer;
+
+    @include mobile{
+        font-size: 1.2rem;
+    }
 }
 
 .modalcallback__inner__box__item>input {
@@ -153,6 +189,11 @@
     margin-bottom: 1.6rem;
     cursor: pointer;
     transition: all 0.3s linear;
+
+    @include burger-header{
+        font-size: 1.8rem;
+        padding: 1.5rem 5rem;
+    }
 }
 
 .modalcallback__inner__form__button:hover {

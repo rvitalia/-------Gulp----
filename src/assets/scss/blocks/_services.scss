@@ -2,6 +2,10 @@
 
 .services__inner {
     padding-bottom: 12.8rem;
+
+    @include slider{
+        padding-bottom: 5rem;
+    }
 }
 
 .services__inner__title {
@@ -11,10 +15,18 @@
     font-size: 72px;
     text-transform: uppercase;
     color: #466BF8;
+
+    @include tablet {
+    text-align: center;
+    }
 }
 
 .services__inner__gallery {
     margin-top: -5rem;
+
+    @include tablet {
+        margin-top: 3rem;
+    }
 }
 
 .services__inner__gallery__buttons {
@@ -22,6 +34,14 @@
     justify-content: space-between;
     max-width: 57.5rem;
     margin-left: auto;
+
+    @include tablet {
+        margin: 0 auto;
+    }
+
+    @include slider{
+        margin: 0 auto 3.2rem;
+    }
 }
 
 .services__inner__gallery__buttons>button {
@@ -37,6 +57,21 @@
     padding: 0.5rem 4.7rem;
     background-color: transparent;
     transition: all 0.3s linear;
+    cursor: pointer;
+
+    @include burger-header{
+        font-size: 12px;
+        padding: 0.7rem 3.5rem;
+        white-space: nowrap;
+    }
+    @include micro-mobile{
+        padding: 0.7rem 2.5rem;
+    }
+    @include small-mobile{
+        font-size: 10px;
+        padding: 0.5rem 2rem;
+        white-space: nowrap;
+    }
 }
 
 .active__tabs.services__inner__gallery__buttons__button{
@@ -49,11 +84,24 @@
     border: 1px solid #D9D9D9;
     margin-top: 4.9rem;
     margin-bottom: 4.8rem;
+
+    @include slider{
+display: none;    }
 }
 
 
 .swiper__services {
     padding: 0 5rem;
+    max-height: 70rem;
+    max-width: 151.786rem;
+
+    @include slider{
+        padding: 0 3rem;
+    }
+
+    @include burger-header{
+        padding: 0 2.2rem;
+    }
 }
 
 .swiper-wrapper {}
@@ -61,25 +109,41 @@
 .swiper-slide {}
 
 .services__inner__gallery__list__category {
-    height: calc($index * 32);
+    height: calc($index * 29.179);
+    max-height: 70rem;
+    min-height: 70rem;
+
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     gap: 4rem;
+
+    @include big-desktop{
+        gap: 2rem;
+        min-height: auto;
+    }
 }
 
-.services__inner__gallery__list__category__left,
+.services__inner__gallery__list__category__left {
+    width: 48.5%;
+    height: 100%;
+}
 .services__inner__gallery__list__category__right {
-    width: 50%;
+    width: 51.5%;
     height: 100%;
 }
 
 .services__inner__gallery__list__category__right {
     max-width: 70.716rem;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    gap: 2.5rem;
+    //gap: 2.5rem;
+    justify-content: space-between;
+
+
+    @include big-desktop{
+        gap: 1rem;
+    }
 }
 
 .services__inner__gallery__list__category__right__row {
@@ -88,11 +152,14 @@
     display: flex;
     justify-content: space-between;
     gap: 4rem;
+
+    @include big-desktop{
+        gap: 2rem;
+    }
 }
 
 .services__inner__gallery__list__category__item {
     padding: 0.6rem 1.007rem;
-    @include bg-cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,8 +169,36 @@
     border-radius: 10px;
     width: 100%;
     max-width: 326.24px;
+    max-height: 34rem;
     position: relative;
     overflow: hidden;
+    @include bg-cover;
+}
+
+.services__inner__gallery__list__category__item__mobile{
+
+    @include slider{
+        max-width: none;
+        height: 100%;
+        min-height: calc($index*23);
+    }
+
+    // @include small-tablet{
+    //     min-height: 26rem;
+    // }
+
+    // @include burger-header{
+    //     min-height: 22rem;
+    // }
+
+    // @include mobile{
+    //     min-height: 24rem;
+    // }
+
+    // @include small-mobile{
+
+    // }
+
 }
 
 .services__inner__gallery__list__category__item--big {
@@ -112,18 +207,8 @@
     padding-top: 2.5rem;
     padding-bottom: 1.3rem;
     max-width: 671.66px;
+    max-height: 72rem;
 }
-.services__inner__gallery__list__category__item>img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: auto;
-}
-
 
 .services__inner__top {}
 
@@ -134,6 +219,15 @@
     font-size: 36px;
     text-transform: uppercase;
     color: #FFFFFF;
+    padding-bottom: 1rem;
+
+    @include big-desktop{
+        font-size: 3rem;
+    }
+
+    @include for-desktop{
+        padding-bottom: 1rem;
+    }
 }
 
 .services__inner__gallery__list__category__item__subtitle {
@@ -144,6 +238,13 @@
     line-height: 28px;
     text-transform: capitalize;
     color: rgba(255, 255, 255, 0.75);
+
+    @include big-desktop{
+        font-size: 1.6rem;
+    }
+    @include for-desktop{
+        line-height: 1.4;
+    }
 }
 
 .services__inner__gallery__list__category__item__button {
@@ -159,6 +260,11 @@
     border: 1px solid #FFFFFF;
     border-radius: 26px;
     transition: all 0.3s ease-in-out;
+
+    @include tablet{
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
+    }
 }
 
 .services__inner__gallery__list__category__item__button:hover{
@@ -179,6 +285,10 @@
     text-transform: uppercase;
     color: #FFFFFF;
     padding-bottom: 0.8rem;
+
+    @include for-desktop{
+        font-size: 3.7rem;
+    }
 }
 
 .services__inner__gallery__list__category__item__subtitle--big {
@@ -189,6 +299,14 @@
     line-height: 37px;
     text-transform: capitalize;
     color: rgba(255, 255, 255, 0.75);
+
+    @include big-desktop{
+        font-size: 2rem;
+    }
+
+    @include for-desktop{
+        line-height: 1.4;
+    }
 }
 
 .services__inner__gallery__list__category__item__button--big {
@@ -204,12 +322,30 @@
     background-color: transparent;
     padding: 1rem 3.7rem;
     transition: all 0.3s ease-in-out;
+
+    @include tablet{
+        font-size: 1.2rem;
+        padding: 0.8rem 2.2rem;
+    }
 }
 
 .swiper-pagination {}
 
 .swiper-button-prev, .swiper-button-next {
-
+    @include burger-header{
+        height: 2rem;
+        width: 2rem;
+    }
+}
+.swiper-button-prev{
+    @include slider{
+        left: var(--swiper-navigation-sides-offset, 0px);
+    }
+}
+.swiper-button-next{
+    @include slider{
+        right: var(--swiper-navigation-sides-offset, 0px);
+    }
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {

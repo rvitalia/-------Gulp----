@@ -11,6 +11,14 @@ export function validationOrder() {
 
 
     const validation = new JustValidate('.form__order');
+    const linkmain = document.querySelector('.header__inner__logo');
+
+
+    function redirect(){
+      setTimeout(function(){
+          linkmain.click();
+      },2000)
+    }
 
 validation
   .addField('.input-name', [
@@ -83,6 +91,7 @@ validation
         if (xhr.status === 200) {
           console.log('Отправлено');
           alert('Форма успешно отправлена');
+          redirect();
         }
       }
     }
