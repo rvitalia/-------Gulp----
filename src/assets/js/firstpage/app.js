@@ -31,29 +31,37 @@ export function swiperSlider() {
             if (window.innerWidth >= 900) {
                 if (element.dataset.filter == 'bilbord') {
                     swiper.slideTo(1, 400, false);
-                    coloractive('BILBORD');
+                    coloractive('БИЛБОРДЫ');
                 }
                 else if (element.dataset.filter == 'city') {
                     swiper.slideTo(8, 400, false)
-                    coloractive('CITY-BANNER');
+                    coloractive('СИТИ-ФОРМАТ');
                 }
                 else if (element.dataset.filter == 'big') {
                     swiper.slideTo(9, 400, false);
-                    coloractive('BIG SCREEN');
+                    coloractive('СВЕТОДИОДНЫЙ ЭКРАН');
+                }
+                else if (element.dataset.filter == 'area') {
+                    swiper.slideTo(6, 400, false);
+                    coloractive('БИЛБОРДЫ-ОБЛАСТЬ');
                 }
             }
             else {
                 if (element.dataset.filter == 'bilbord') {
                     swiper.slideTo(1, 400, false);
-                    coloractive('BILBORD');
+                    coloractive('БИЛБОРДЫ');
                 }
                 else if (element.dataset.filter == 'city') {
                     swiper.slideTo(40, 400, false);
-                    coloractive('CITY-BANNER');
+                    coloractive('СИТИ-ФОРМАТ');
                 }
                 else if (element.dataset.filter == 'big') {
                     swiper.slideTo(45, 400, false);
-                    coloractive('BIG SCREEN');
+                    coloractive('СВЕТОДИОДНЫЙ ЭКРАН');
+                }
+                else if (element.dataset.filter == 'area') {
+                    swiper.slideTo(32, 400, false);
+                    coloractive('БИЛБОРДЫ-ОБЛАСТЬ');
                 }
             }
         })

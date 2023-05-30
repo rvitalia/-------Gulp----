@@ -1,0 +1,21 @@
+.mapObjects {
+}
+.container {
+}
+.mapObjects__inner {
+}
+
+
+.mapObjects__inner__title {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    text-transform: uppercase;
+    color: #466BF8;
+
+    @include for-desktop {
+    text-align: center;
+    }
+}
+

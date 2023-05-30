@@ -1,4 +1,9 @@
-.about {}
+.about {
+
+    @include burger-header{
+        margin-top: 39rem;
+    }
+}
 
 .about__inner {
     padding-bottom: 12.8rem;

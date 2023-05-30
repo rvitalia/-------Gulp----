@@ -25,14 +25,17 @@ export function activeTabs(){
     titles.forEach(element => {
         let title = element.textContent;
 
-        if(title == 'BILBORD'){
-            coloractive('BILBORD');
+        if(title == 'БИЛБОРДЫ'){
+            coloractive('БИЛБОРДЫ');
         }
-        else if(title == 'CITY-BANNER'){
-            coloractive('CITY-BANNER');
+        else if(title == 'СИТИ-ФОРМАТ'){
+            coloractive('СИТИ-ФОРМАТ');
         }
-        else if(title == 'BIG SCREEN'){
-            coloractive('BIG SCREEN');
+        else if(title == 'СВЕТОДИОДНЫЙ ЭКРАН'){
+            coloractive('СВЕТОДИОДНЫЙ ЭКРАН');
+        }
+        else if(title == 'БИЛБОРДЫ-ОБЛАСТЬ'){
+            coloractive('БИЛБОРДЫ-ОБЛАСТЬ');
         }
     });
 }

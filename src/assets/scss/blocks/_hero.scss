@@ -25,7 +25,8 @@
     @include small-tablet {
         margin-bottom: 8rem;
     }
-    @include burger-header{
+
+    @include burger-header {
         margin-bottom: 25rem;
     }
 }
@@ -81,11 +82,23 @@
     @include burger-header {
         width: 100%;
         max-width: 43rem;
-        margin: -34rem auto;
-    }
-    @include mobile{
+        margin: -73rem auto;
         padding-left: 2rem;
     }
+
+    @include mobile {
+        padding-left: 2rem;
+    }
+}
+
+.hero__inner__info__wrapper{
+
+    // @include burger-header{
+    //     background: #D2D2D2;
+    //     filter: blur(85px);
+    //     position: relative;
+    //     z-index: -1;
+    // }
 }
 
 .hero__inner__title {
@@ -97,6 +110,13 @@
     line-height: 74px;
     text-transform: uppercase;
     color: #FFFFFF;
+    background: linear-gradient(176.7deg, #FFFFFF 2.73%, #FFFFFF 118.91%);
+    -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     @include for-desktop {
         font-size: 5.6rem;
@@ -110,7 +130,16 @@
         font-size: 4.1rem;
         line-height: 1.3;
     }
-    @include small-mobile{
+
+    @include burger-header {
+        margin-bottom: 7rem;
+        color: rgba(255, 255, 255, 0.75);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        position: relative;
+        z-index: 1;
+    }
+
+    @include small-mobile {
         font-size: 3.5rem;
     }
 }
@@ -134,7 +163,11 @@
         margin-bottom: 2rem;
     }
 
-    @include small-mobile{
+    @include burger-header{
+        margin-bottom: 35rem;
+    }
+
+    @include small-mobile {
         max-width: 30rem;
     }
 }
