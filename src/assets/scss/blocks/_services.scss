@@ -1,7 +1,7 @@
 .services {}
 
 .services__inner {
-    padding-bottom: 12.8rem;
+    padding-bottom: 7.8rem;
 
     @include slider{
         padding-bottom: 5rem;
@@ -42,6 +42,14 @@
     @include slider{
         margin: 0 auto 3.2rem;
     }
+
+    @include small-tablet{
+        max-width: 65rem;
+    }
+
+    @include burger-header{
+        max-width: none;
+    }
 }
 
 .services__inner__gallery__buttons>button {
@@ -68,11 +76,12 @@
     @include small-tablet{
         font-size: 12px;
         padding: 0.7rem 3.5rem;
-        white-space: nowrap;
+        // white-space: nowrap;
     }
 
     @include burger-header{
         padding: 0.5rem 2.5rem;
+        border-radius: 1.5rem;
     }
 
     @include mobile{
@@ -81,7 +90,7 @@
     @include map465{
         font-size: 10px;
         // padding: 0.5rem 1rem;
-        white-space: nowrap;
+        // white-space: nowrap;
     }
     @include small-mobile{
         font-size: 9px;
@@ -233,11 +242,6 @@ display: none;    }
 
     @include maps{
         font-size: 2.5rem;
-        white-space: nowrap;
-    }
-
-    @include for-desktop{
-        // margin-bottom: 1rem;
     }
 }
 

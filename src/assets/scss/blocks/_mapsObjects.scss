@@ -3,6 +3,7 @@
 .container {
 }
 .mapObjects__inner {
+    padding-bottom: 5rem;
 }
 
 
@@ -13,9 +14,22 @@
     font-size: 72px;
     text-transform: uppercase;
     color: #466BF8;
+    padding-bottom: 4rem;
 
     @include for-desktop {
     text-align: center;
     }
+
+    @include burger-header{
+        font-size: 6rem;
+    }
+
+    @include micro-mobile{
+        font-size: 5.5rem;
+    }
 }
 
+.mapObjects__inner__map{
+    width: 100%;
+    height: calc((1vw + 1vh) * 27);
+}

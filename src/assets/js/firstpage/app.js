@@ -1,4 +1,5 @@
 import Swiper, { Navigation, Pagination } from "swiper";
+import { YmapsTotalInit } from "../object/placemark";
 import { coloractive, disabledactive } from "./activeTabs";
 import { burger } from "./burger";
 import { loadData } from "./load&renderdata";
@@ -79,4 +80,5 @@ burger();
 //загрузка данных Json
 loadData();
 
-
+//отрисовываем точку на карте
+YmapsTotalInit();
