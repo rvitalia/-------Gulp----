@@ -75,7 +75,7 @@ export async function YmapsTotalInit() {
                 {
                     iconContent: title,
                     balloonContentHeader: fullname,
-                    balloonContentBody: `<img src="./assets/images/object/${element.foto2}" height="150" width="300">`,
+                    balloonContentBody: `<img src="./assets/images/object/${element.foto2}" height="170" width="340">`,
                     balloonContentFooter: (element.text),
                 },
                 { preset: "islands#redStretchyIcon" }));
