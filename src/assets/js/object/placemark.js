@@ -74,8 +74,8 @@ export async function YmapsTotalInit() {
             myCollection.add(new ymaps.Placemark(array,
                 {
                     iconContent: title,
-                    balloonContentHeader: title,
-                    balloonContentBody: 'Боди',
+                    balloonContentHeader: fullname,
+                    balloonContentBody: `<img src="./assets/images/object/${element.foto2}" height="150" width="300">`,
                     balloonContentFooter: (element.text),
                 },
                 { preset: "islands#redStretchyIcon" }));
