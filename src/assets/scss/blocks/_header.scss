@@ -36,8 +36,15 @@
     transition: all 0.4s linear;
 }
 
+.header__inner__menu>ul>li>a{
+    transition: all 0.4s linear;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid transparent;
+}
+
 .header__inner__menu>ul>li>a:hover {
     color: #4258A2;
+    border-color: #4258A2;
 }
 
 .burger__menu{

@@ -162,6 +162,7 @@ function js(cb) {
                 app: './src/assets/js/firstpage/app.js',
                 main: './src/assets/js/secondpage/main.js',
                 object: './src/assets/js/object/object.js',
+                politics: './src/assets/js/object/politics.js',
             },
             output: {
                 filename: '[name].js',
@@ -204,6 +205,7 @@ function jsWatch(cb) {
                 app: './src/assets/js/firstpage/app.js',
                 main: './src/assets/js/secondpage/main.js',
                 object: './src/assets/js/object/object.js',
+                politics: './src/assets/js/object/politics.js',
             },
             output: {
                 filename: '[name].js',
