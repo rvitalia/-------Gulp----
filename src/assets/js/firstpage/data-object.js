@@ -62,12 +62,18 @@ export async function renderDataobject(Id) {
                                 <div class="swiper-slide__object"  style="background-image: url(./assets/images/object/${currentObject.foto2});">
                                   
                                 </div>
-                            </div>
-        
-        
+                            </div>              
+                        </div>
+
+                            <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev swiper-button-object">
+                            <img src="./assets/images/services/arrowleft.svg" alt="arrow" data-arrow>
+                        </div>
+                        <div class="swiper-button-next swiper-button-object">
+                            <img src="./assets/images/services/arrowright.svg" alt="arrow" data-arrow>
                         </div>
                         <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination swiper-pagination-object"></div>
         
                     </div>
                 </div>

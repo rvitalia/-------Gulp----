@@ -16,6 +16,12 @@ footer {
     width: 100%;
     max-width: 16.9rem;
 
+    &:last-child{
+        @include small-mobile{
+            max-width: 10rem;
+        }
+    }
+
     @include burger-header{
         max-width: 12.9rem;
     }
@@ -27,16 +33,12 @@ footer {
     align-items: flex-start;
 }
 
-.footer__inner__both:nth-child(1){
-    @include mobile{
-        display: none;
-    }
-}
-
 .footer__inner__both__menu__row {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .footer__inner__both__menu__row + .footer__inner__both__menu__row {
@@ -50,7 +52,16 @@ footer {
     font-size: 16px;
     color: #272727;
     text-align: left;
+
+    width: 30rem;
+    display: block;
+
+
+    @include small-mobile{
+        font-size: 1rem;
+    }
 }
+
 
 .footer__inner__center {
     width: 98px;
@@ -58,14 +69,17 @@ footer {
     display: flex;
     align-items: center;
 
-    @include burger-header {
-        height: 3.5rem;
-        width: auto;
+    @include small-tablet {
+        display: none;
     }
 }
 
 .footer__inner__both__link +.footer__inner__both__link {
     margin-left: 4.1rem;
+
+    @include small-mobile{
+        margin-left: 2rem;
+    }
 }
 .footer__inner__both__link{
     display: inline-block;

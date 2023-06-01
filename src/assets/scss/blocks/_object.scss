@@ -59,7 +59,7 @@
 .swiper-wrapper {}
 
 .swiper-slide__object {
-    max-width: 1152px;
+    max-width: 123rem;
     max-height: 563px;
     height: calc($index*27);
     border: 1px solid #466BF8;
@@ -183,4 +183,11 @@
     @include micro-mobile {
         height: calc($index*18);
     }
+}
+.swiper-button-object{
+    top: var(--swiper-navigation-top-offset, 97%);
+}
+
+.swiper-pagination-object{
+    z-index: 9;
 }
