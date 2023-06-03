@@ -1,0 +1,13 @@
+.icon {
+    position: fixed;
+    bottom: 8rem;
+    right: 2rem;
+    z-index: 10;
+}
+
+.icon__chat {
+    cursor: pointer;
+}
+.animate__animated.animate__swing{
+    --animate-repeat: 5;
+}
