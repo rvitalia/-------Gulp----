@@ -6,7 +6,6 @@ export function modalCallOpen() {
         const popuptel = document.querySelector('.modalcallback');
         const body = document.querySelector('body');
 
-
         document.body.style.paddingRight = paddingOffset;
         let fixwindow = document.querySelectorAll('.fix__block');
 
@@ -22,14 +21,17 @@ export function modalCallOpen() {
         }, 400)
     }
 
-    let buttonCallback = document.querySelector('[data-modalcallback]');
-    buttonCallback.addEventListener('click', () => {
-        modalOpen();
-        setTimeout(()=>{
-            //валидация и отправка на почту
-        validation();
-        },150);
-    })
+    let buttonCallback = document.querySelectorAll('[data-modalcallback]');
+    buttonCallback.forEach(element => {
+        element.addEventListener('click', () => {
+            modalOpen();
+            setTimeout(()=>{
+                //валидация и отправка на почту
+            validation();
+            },150);
+        })
+    });
+  
 }
 
 
@@ -37,7 +39,6 @@ function removeClass(parent) {
     parent.style.opacity = '0';
     const body = document.querySelector('body');
     let fixwindow = document.querySelectorAll('.fix__block');
-    console.log(parent);
 
     setTimeout(function () {
         parent.classList.remove('active__popuptel');

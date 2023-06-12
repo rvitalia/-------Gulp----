@@ -4,6 +4,7 @@ import { coloractive, disabledactive } from "./activeTabs";
 import { burger } from "./burger";
 import { loadData } from "./load&renderdata";
 import { modalCallCancel, modalCallOpen } from "./modal";
+import { doubleMapClick } from './doubleclick.js'
 
 
 export function swiperSlider() {
@@ -19,11 +20,10 @@ export function swiperSlider() {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
+        }
     });
 
     //смена слайдо при клике
-
     let tabs = document.querySelectorAll('.services__inner__gallery__buttons__button');
 
     tabs.forEach(element => {
@@ -31,37 +31,40 @@ export function swiperSlider() {
             disabledactive();
             if (window.innerWidth >= 900) {
                 if (element.dataset.filter == 'bilbord') {
-                    swiper.slideTo(1, 400, false);
-                    coloractive('БИЛБОРДЫ');
+                    swiper.slideTo(0, 400, false);
+                    coloractive('БИЛБОРД-ПСКОВ');
                 }
                 else if (element.dataset.filter == 'city') {
-                    swiper.slideTo(8, 400, false)
+                    swiper.slideTo(11, 400, false)
                     coloractive('СИТИ-ФОРМАТ');
                 }
                 else if (element.dataset.filter == 'big') {
-                    swiper.slideTo(9, 400, false);
+                    swiper.slideTo(15, 400, false);
                     coloractive('СВЕТОДИОДНЫЙ ЭКРАН');
                 }
                 else if (element.dataset.filter == 'area') {
-                    swiper.slideTo(6, 400, false);
+                    swiper.slideTo(8, 400, false);
                     coloractive('БИЛБОРДЫ-ОБЛАСТЬ');
                 }
             }
             else {
                 if (element.dataset.filter == 'bilbord') {
                     swiper.slideTo(1, 400, false);
-                    coloractive('БИЛБОРДЫ');
+                    doubleMapClick('bilbord-all'); 
+                    coloractive('БИЛБОРД-ПСКОВ');
                 }
                 else if (element.dataset.filter == 'city') {
-                    swiper.slideTo(40, 400, false);
+                    swiper.slideTo(43, 400, false);
+                    doubleMapClick('city-format'); 
                     coloractive('СИТИ-ФОРМАТ');
                 }
                 else if (element.dataset.filter == 'big') {
-                    swiper.slideTo(45, 400, false);
+                    swiper.slideTo(53, 400, false);
                     coloractive('СВЕТОДИОДНЫЙ ЭКРАН');
                 }
                 else if (element.dataset.filter == 'area') {
-                    swiper.slideTo(32, 400, false);
+                    swiper.slideTo(35, 400, false);
+                    doubleMapClick('bilbord-area'); 
                     coloractive('БИЛБОРДЫ-ОБЛАСТЬ');
                 }
             }
@@ -82,3 +85,5 @@ loadData();
 
 //отрисовываем точку на карте
 YmapsTotalInit();
+
+

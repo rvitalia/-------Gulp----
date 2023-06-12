@@ -1,34 +1,29 @@
 ---
 layout: default
-title: Разработка, изготовление и размещение наружной рекламы на билбордах и сити-форматах в Пскове и Псковской области - Рекламное агентство Креатив
+title: Разработка, изготовление и размещение наружной рекламы на билбордах и сити-форматах в Пскове и Псковской области- Рекламное агентство Креатив
 ---
-<section class="hero">
+<div class="hero">
     <div class="container">
         <div class="hero__inner">
-            <div class="hero__inner__img">
-                <picture class="hero__inner__img__item">
-                    <source media="(min-width: 651px) and (max-width: 1150px)" srcset="./assets/images/hero/tablet.jpg"
-                        alt="tablet-hero">
-                    <source media="(min-width: 200px) and (max-width: 650px)"
-                        srcset="./assets/images/hero/Rectangle1361.png" alt="mobile-hero">
-                    <img src="./assets/images/hero/Left.jpg" alt="main-image">
-                </picture>
-                <picture class="hero__inner__img__item">
-                    <img src="./assets/images/hero/right.png" alt="main-image">
-                </picture>
-            </div>
+            <picture class="hero__inner__img__item">
+                <source media="(min-width: 651px) and (max-width: 1150px)" srcset="./assets/images/hero/tablet.jpg">
+                <source media="(min-width: 200px) and (max-width: 650px)"
+                    srcset="./assets/images/hero/Rectangle1361.png">
+                <img src="./assets/images/hero/tablet.jpg" alt="main-image">
+            </picture>
+
             <div class="hero__inner__info">
                 <div class="hero__inner__info__wrapper">
-                    <h1 class="hero__inner__title">Больше,<p>Чем просто реклама</p>
-                    </h1>
+                    <div class="hero__inner__title">Больше,<p>Чем просто реклама</p>
+                    </div>
                     <span class="hero__inner__subtitle">Занимаемся запуском рекламы в Пскове и Псковской области</span>
-                    <a href="./order.php" class="hero__inner__order">Сделать заказ</a>
+                    <button class="hero__inner__order" data-modalcallback>Связаться с нами</button>
                 </div>
 
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <section class="about" id="aboutUS">
     <div class="container">
@@ -39,7 +34,7 @@ title: Разработка, изготовление и размещение н
                 <picture class="about__inner__content__img">
                     <img src="./assets/images/about/868ece452162532.png" alt="picture">
                 </picture>
-                <span class="about__inner__content__text">
+                <div class="about__inner__content__text">
                     <p>
                         РА Креатив один из крупных операторов г. Пскова свою деятельность ведем с 1997 г. Являемся
                         собственником рекламных конструкций и экспертами в наружной рекламе. У нас достаточно гибкий
@@ -47,13 +42,13 @@ title: Разработка, изготовление и размещение н
                         к каждому клиенту.
                     </p>
 
-                    <p><span>Основная наша деятельность</span></p>
+                    <span>Основная наша деятельность</span>
                     <ul>
-                        <li> Размещение на биллбордах, ситибордах, сити-форматах,  на светодиодном экране.</li>
+                        <li> Размещение на билбордах, ситибордах, сити-форматах, на светодиодном экране.</li>
                         <li> Широкоформатная и интерьерная печать.</li>
                         <li> Производство, монтаж и размещение наружной рекламы.</li>
                     </ul>
-                </span>
+                </div>
             </div>
         </div>
     </div>
@@ -67,11 +62,15 @@ title: Разработка, изготовление и размещение н
 
 
                 <div class="services__inner__gallery__buttons">
-                    <button type="button" class="services__inner__gallery__buttons__button" data-filter="city">СИТИ-ФОРМАТ</button>
-                    <button type="button" class="services__inner__gallery__buttons__button" data-filter="area">БИЛБОРДЫ-ОБЛАСТЬ</button>
+                    <button type="button" class="services__inner__gallery__buttons__button"
+                        data-filter="city">СИТИ-ФОРМАТ</button>
+                    <button type="button" class="services__inner__gallery__buttons__button"
+                        data-filter="area">БИЛБОРДЫ-ОБЛАСТЬ</button>
 
-                    <button type="button" class="services__inner__gallery__buttons__button" data-filter="bilbord">БИЛБОРДЫ</button>
-                    <button type="button" class="services__inner__gallery__buttons__button" data-filter="big">СВЕТОДИОДНЫЙ ЭКРАН</button>
+                    <button type="button" class="services__inner__gallery__buttons__button"
+                        data-filter="bilbord">БИЛБОРД-ПСКОВ</button>
+                    <button type="button" class="services__inner__gallery__buttons__button"
+                        data-filter="big">СВЕТОДИОДНЫЙ ЭКРАН</button>
                 </div>
 
                 <hr class="services__inner__gallery__line">
@@ -114,10 +113,18 @@ title: Разработка, изготовление и размещение н
                 <h2 class="mapObjects__inner__title">Карта объектов</h2>
 
                 <div class="mapObjects__inner__tabs">
-                    <button type="button" class="services__inner__gallery__buttons__button mapObjects__inner__tabs__button" data-filter="all">ВСЕ</button>
-                    <button type="button" class="services__inner__gallery__buttons__button mapObjects__inner__tabs__button" data-filter="city-format">СИТИ-ФОРМАТ</button>
-                    <button type="button" class="services__inner__gallery__buttons__button mapObjects__inner__tabs__button" data-filter="bilbord-area">БИЛБОРДЫ-ОБЛАСТЬ</button>
-                    <button type="button" class="services__inner__gallery__buttons__button mapObjects__inner__tabs__button" data-filter="bilbord-all">БИЛБОРДЫ</button>
+                    <button type="button"
+                        class="services__inner__gallery__buttons__button mapObjects__inner__tabs__button"
+                        data-filter="all">ВСЕ</button>
+                    <button type="button"
+                        class="services__inner__gallery__buttons__button mapObjects__inner__tabs__button"
+                        data-filter="city-format">СИТИ-ФОРМАТ</button>
+                    <button type="button"
+                        class="services__inner__gallery__buttons__button mapObjects__inner__tabs__button"
+                        data-filter="bilbord-area">БИЛБОРДЫ-ОБЛАСТЬ</button>
+                    <button type="button"
+                        class="services__inner__gallery__buttons__button mapObjects__inner__tabs__button"
+                        data-filter="bilbord-all">БИЛБОРД-ПСКОВ</button>
                 </div>
             </div>
 
@@ -136,8 +143,8 @@ title: Разработка, изготовление и размещение н
                 Заявите о себе вместе с нами
             </h2>
             <div class="statement__inner__bottom">
-                <a href="./order.php" class="statement__inner__bottom__buttom">Заказать</a>
-                <button class="statement__inner__bottom__buttom" data-modalcallback>связаться</button>
+                <!-- <a href="./order.php" class="statement__inner__bottom__buttom">Заказать</a> -->
+                <button class="statement__inner__bottom__button" data-modalcallback>связаться</button>
             </div>
         </div>
     </div>
@@ -147,52 +154,55 @@ title: Разработка, изготовление и размещение н
 <div class="icon">
     <div class="container">
         <picture class="icon__chat ">
-            <img class="animate__animated animate__swing" src="./assets/images/svg/Чат.svg" alt="icon" id="button__chat">
+            <img class="animate__animated animate__swing" src="./assets/images/svg/Чат.svg" alt="icon"
+                id="button__chat">
         </picture>
     </div>
 </div>
 
 <section class="AB__chat" id="AB__chat">
-        <div class="AB__chat__inner">
-            <div class="AB__chat__inner__top">
-                <picture class="AB__chat__inner__top__operator">
-                    <img src="./assets/images/svg/woman1.png" alt="AB-Chat">
-                </picture>
-                <div class="AB__chat__inner__top__col">
-                    <div class="AB__chat__inner__top__main">
-                        <h2 class="AB__chat__inner__title">AB-Chat</h2>
-                        <a href="https://t.me/ABroskoStudio" class="AB__chat__inner__top__main__link"><img src="./assets/images/svg/TG.svg" alt="telegram"></a>
-                    </div>
-                    <h6 class="AB__chat__inner__top__col__operator">Оператор Мария онлайн</h6>
+    <div class="AB__chat__inner">
+        <div class="AB__chat__inner__top">
+            <picture class="AB__chat__inner__top__operator">
+                <img src="./assets/images/svg/woman1.png" alt="AB-Chat">
+            </picture>
+            <div class="AB__chat__inner__top__col">
+                <div class="AB__chat__inner__top__main">
+                    <h2 class="AB__chat__inner__title">AB-Chat</h2>
+                    <a href="https://t.me/ABroskoStudio" class="AB__chat__inner__top__main__link"><img
+                            src="./assets/images/svg/TG.svg" alt="telegram"></a>
                 </div>
-                <img src="./assets/images/svg/Gnome-window-close.svg" alt="close" width="24" height="24" class="AB__chat__inner__top__close">
+                <h6 class="AB__chat__inner__top__col__operator">Оператор Мария онлайн</h6>
             </div>
-            <div class="AB__chat__inner__center">
-                <div class="AB__chat__inner__center__inner" id="box">
+            <img src="./assets/images/svg/Gnome-window-close.svg" alt="close" width="24" height="24"
+                class="AB__chat__inner__top__close">
+        </div>
+        <div class="AB__chat__inner__center">
+            <div class="AB__chat__inner__center__inner" id="box">
 
-                    <!-- =====================Стартовое сообщение=================== -->
-                    <div class="AB__chat__inner__center__bot">
-                        <!-- <picture>
+                <!-- =====================Стартовое сообщение=================== -->
+                <div class="AB__chat__inner__center__bot">
+                    <!-- <picture>
                             <img src="./assets/images/svg/imgBot.svg" alt="AB-bot">
                         </picture> -->
-                        <span class="AB__chat__inner__center__bot__text" data-bot>Здравствуйте, здесь вы можете задать любой
-                            интересующий вопрос.</span>
-                    </div>
-
+                    <span class="AB__chat__inner__center__bot__text" data-bot>Здравствуйте, здесь вы можете задать любой
+                        интересующий вопрос.</span>
                 </div>
+
             </div>
-            <div class="AB__chat__inner__bottom">
-                <input type="text" class="AB__chat__inner__bottom__text" placeholder="Введите сообщение"
-                    data-input="people">
-                <picture data-sent="people">
-                    <img src="./assets/images/svg/ArrowSend.svg" alt="AB-sent">
-                </picture>
-            </div>
-            <span class="AB__chat__inner__abrosko">
-                Бизнес мессенджер 
-                <a href="https://abrosko-studio.ru/">ABrosko</a>
-            </span>
         </div>
+        <div class="AB__chat__inner__bottom">
+            <input type="text" class="AB__chat__inner__bottom__text" placeholder="Введите сообщение"
+                data-input="people">
+            <picture data-sent="people">
+                <img src="./assets/images/svg/ArrowSend.svg" alt="AB-sent">
+            </picture>
+        </div>
+        <span class="AB__chat__inner__abrosko">
+            Бизнес мессенджер
+            <a href="https://abrosko-studio.ru/">ABrosko</a>
+        </span>
+    </div>
 </section>
 <div class="modalcallback fix__block" id="callback">
     <img src="./assets/images/svg/close.svg" alt="close" class="modalcallback__close" data-close>
@@ -200,15 +210,23 @@ title: Разработка, изготовление и размещение н
         <div class="modalcallback__inner">
             <h3 class="modalcallback__inner__title">Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
             <form action="#" class="form" id="form" method="post" data-formcall autocomplete="off">
-                <label class="label__attention">
-                    <input type="text" autocomplete="off" name="name" class="modalcallback__inner__input input-name"
-                        id="name" data-validate-field="name" placeholder="Ваше имя" required>
-
-                </label>
+                <div class="form__row">
+                    <label class="label__attention">
+                        <input type="text" autocomplete="off" name="name" class="modalcallback__inner__input input__half input-name"
+                            id="name" data-validate-field="name" placeholder="Ваше имя" required>
+                    </label>
+                    <label class="label__attention">
+                        <input type="text" autocomplete="off" name="surname" class="modalcallback__inner__input input__half input-surname"
+                            id="surname" data-validate-field="surname" placeholder="Ваша фамилия" required>
+                    </label>
+                </div>
                 <label class="label__attention">
                     <input type="tel" autocomplete="off" name="tel" class="modalcallback__inner__input input-tel"
                         id="tel" data-validate-field="tel" placeholder="Ваш номер телефона" required>
-
+                </label>
+                <label class="label__attention">
+                    <input type="email" autocomplete="off" name="email" class="modalcallback__inner__input input-email"
+                        id="email" data-validate-field="emaol" placeholder="Ваша почта" required>
                 </label>
                 <span class="modalcallback__inner__selecting">Выберите подходящий способ связи</span>
 
@@ -216,16 +234,13 @@ title: Разработка, изготовление и размещение н
                     <label for="call" class="modalcallback__inner__box__item">
                         <input type="radio" id="call" name="callback" value="call"> Позвонить
                     </label>
-                    <label for="whatsapp" class="modalcallback__inner__box__item">
-                        <input type="radio" id="whatsapp" name="callback" value="whatsapp"> What’s App
-                    </label>
-                    <label for="Telegram" class="modalcallback__inner__box__item">
-                        <input type="radio" id="Telegram" name="callback" value="Telegram"> Telegram
+                    <label for="Email" class="modalcallback__inner__box__item">
+                        <input type="radio" id="Email" name="callback" value="Email"> Email
                     </label>
                 </div>
                 <button class="modalcallback__inner__form__button" type="submit">Отправить заявку</button>
             </form>
-            <a href="#" class="modalcallback__inner__politics">Оставляя заявку, вы соглашаетесь с политикой
+            <a href="politics.php" class="modalcallback__inner__politics">Оставляя заявку, вы соглашаетесь с политикой
                 конфиденциальности</a>
         </div>
     </div>

@@ -1,5 +1,5 @@
 import { swiperObject } from "../object/object";
-import { getCoordinate, Ymapsinit } from "../object/placemark";
+import { Ymapsinit } from "../object/placemark";
 
 export function sendData() {
     let readMores = document.querySelectorAll('[data-object]');
@@ -38,7 +38,7 @@ export async function renderDataobject(Id) {
         
         
         <section class="slider">
-            <div class="container container-object">
+            <div class="container">
                 <div class="slider__inner">
                     <!-- Slider main container -->
                     <div class="swiper swiper-object">
@@ -81,12 +81,12 @@ export async function renderDataobject(Id) {
         </section>
         
         <section class="object">
-            <div class="container container-object">
+            <div class="container">
                 <div class="object__inner">
                     <h2 class="object__inner__title">${currentObject.title}</h2>
                     <span class="object__inner__text">${currentObject.text}</span>
         
-                    <a href="./order.php" class="object__inner__link">Сделать заказ</a>
+                    <button type="button" class="object__inner__link" data-modalcallback>Связаться с нами</button>
                 </div>
             </div>
         </section>`;

@@ -1,6 +1,7 @@
 import Swiper, { Navigation, Pagination } from "swiper";
 import { burger } from "../firstpage/burger";
 import { receiveData } from "../firstpage/data-object";
+import { modalCallCancel, modalCallOpen } from "../firstpage/modal";
 
 export function swiperObject() {
     const swiper = new Swiper('.swiper-object', {
@@ -50,5 +51,8 @@ burger();
 //получаем данные из локал сторэдж
 receiveData();
 
-
-
+window.addEventListener('load', function () {
+    //открытие и закрытие модального окна
+    modalCallOpen();
+    modalCallCancel();
+});

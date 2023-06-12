@@ -1,5 +1,5 @@
 .breadcrump {
-    margin: 4.8rem 0 2.4rem;
+    margin: 2.8rem 0 2.5rem;
 }
 
 .breadcrump>li {
@@ -46,27 +46,31 @@
     padding-bottom: 4.8rem;
 }
 
-.slider__inner {}
-
-.swiper {}
-
 .swiper-object {
     max-width: 1252px;
     max-height: 603px;
-    padding-bottom: 4rem;
-}
+    padding: 0 4.5rem 4rem;
 
-.swiper-wrapper {}
+    @include slider{
+        padding: 0 3.5rem 4rem;
+    }
+
+    @include burger-header{
+        padding: 0 2.5rem 4rem;
+    }
+}
 
 .swiper-slide__object {
     max-width: 123rem;
     max-height: 563px;
     height: calc($index*27);
-    border: 1px solid #466BF8;
+    border: 1px solid rgba(#466BF8, 0.3);
     border-radius: 10px;
     margin: 0 auto;
     overflow: hidden;
-    @include bg-cover;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     @include burger-header {
         height: calc($index*23);
@@ -98,18 +102,18 @@
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 700;
-    font-size: 72px;
+    font-size: 36px;
     line-height: 100%;
     letter-spacing: 1px;
     color: #466BF8;
     padding-bottom: 2.4rem;
 
     @include for-desktop {
-        font-size: 5rem;
+        font-size: 3.2rem;
     }
 
     @include small-tablet {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     @include mobile {
@@ -149,16 +153,17 @@
     font-weight: 400;
     font-size: 24px;
     color: #466BF8;
-    max-width: 235px;
+    // max-width: 235px;
     margin-left: auto;
     white-space: nowrap;
     margin-bottom: 7.2rem;
     transition: all 0.3s linear;
+    cursor: pointer;
 
     @include small-tablet {
         font-size: 1.8rem;
         padding: 0.8rem 2rem;
-        max-width: 16rem;
+        // max-width: 16rem;
         text-align: center;
     }
 
@@ -183,9 +188,6 @@
     @include micro-mobile {
         height: calc($index*18);
     }
-}
-.swiper-button-object{
-    top: var(--swiper-navigation-top-offset, 97%);
 }
 
 .swiper-pagination-object{

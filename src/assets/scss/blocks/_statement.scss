@@ -1,8 +1,5 @@
 .statement {
-    padding-bottom: 12.8rem;
-    @include tablet{
-        padding-bottom: 6rem;
-    }
+    padding-bottom: 2.8rem;
 }
 
 .statement__inner {
@@ -12,47 +9,41 @@
     border-radius: 0px 0px 100px 100px;
 
     @include small-tablet {
-        border-radius:  0;
+        border-radius: 0;
     }
 }
 
 .statement__inner__title {
     font-family: 'Ubuntu';
-    font-style: normal;
     font-weight: 700;
-    font-size: 96px;
-    line-height: 110px;
+    font-size: 75px;
+    line-height: 1.4;
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding: 9.9rem 0 12.8rem;
-    max-width: 120rem;
+    padding: 4.9rem 0 5.8rem;
+    max-width: 92rem;
     margin: 0 auto;
 
-    @include for-desktop{
-        font-size: 8rem;
-        max-width: 80rem;
-    }
-
-    @include tablet{
+    @include tablet {
         font-size: 6rem;
         max-width: 60rem;
-        padding: 5rem 0 7rem;
+        padding: 4rem 0 5rem;
     }
 
-    @include small-tablet{
+    @include small-tablet {
         font-size: 5rem;
         max-width: 50rem;
-        padding: 4rem 0 5rem;
+        padding: 4rem 0 4rem;
         line-height: 1.8;
     }
 
-    @include burger-header{
+    @include burger-header {
         font-size: 4rem;
         line-height: 1.5;
     }
 
-    @include mobile{
+    @include mobile {
         font-size: 3rem;
         max-width: 30rem;
         line-height: 1.2;
@@ -64,22 +55,22 @@
     width: 100%;
     max-width: 41.4rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
-    padding-bottom: 11.5rem;
-    
-    @include small-tablet{
-        padding-bottom: 6rem;
+    padding-bottom: 6.5rem;
+
+    @include small-tablet {
+        padding-bottom: 4.5rem;
         max-width: 35rem;
     }
 
-    @include mobile{
+    @include mobile {
         max-width: 26rem;
         padding-bottom: 3rem;
     }
 }
 
-.statement__inner__bottom__buttom {
+.statement__inner__bottom__button {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
@@ -87,48 +78,26 @@
     line-height: 18px;
     text-transform: uppercase;
     color: #466BF8;
-    padding: 1rem 4rem;
+    padding: 1.5rem 4rem;
     background-color: white;
     border: 1px solid #FFFFFF;
     border-radius: 26px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
-    &:nth-child(1){
-        padding: 1rem 4.5rem;
-
-        @include mobile{
-            padding: 0.8rem 1rem;
-        }
+    @include mobile {
+        padding: 0.8rem 1rem;
     }
 
-@include mobile{
-    font-size: 1.3rem;
-    padding: 0.8rem 1rem;
-    width: 11rem;
-    text-align: center;
-}
-}
-.statement__inner__bottom__buttom:hover{
-    background-color: transparent;
-    color: #FFFFFF;
-}
-
-.statement__inner__bottom__buttom:nth-child(2) {
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    background-color: transparent;
-
-    @include mobile{
+    @include mobile {
         font-size: 1.3rem;
+        padding: 0.8rem 1rem;
+        width: 11rem;
+        text-align: center;
     }
 }
-.statement__inner__bottom__buttom:nth-child(2):hover{
-    background-color: white;
-    color: #466BF8;
+
+.statement__inner__bottom__button:hover {
+    background-color: transparent;
+    color: #FFFFFF;
 }

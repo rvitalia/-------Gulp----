@@ -4,7 +4,7 @@
     height: 418.49px;
     border-radius: 20px;
     position: fixed;
-    bottom: 14rem;
+    bottom: 7rem;
     right: 3rem;
     z-index: 10;
     opacity: 0;
@@ -53,6 +53,14 @@
         height: 36.73px;
         margin-left: 0.7rem;
         display: none;
+    }
+
+
+    &>img{
+        transition: all 0.3s linear;
+    }
+    &>img:hover{
+        margin-top: -0.5rem;
     }
 }
 

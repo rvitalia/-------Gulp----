@@ -28,6 +28,33 @@ validation
       errorMessage: 'Введите имя!'
     }
   ])
+  .addField('.input-surname', [
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+    },
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Введите фамилию!'
+    }
+  ])
+  .addField('.input-email', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Email обязателен',
+    },
+    {
+      rule: 'email',
+      value: true,
+      errorMessage: 'Введите корректный Email',
+    },
+  ])
   .addField('.input-tel', [
     {
       rule: 'required',

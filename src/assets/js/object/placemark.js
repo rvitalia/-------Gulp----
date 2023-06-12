@@ -47,8 +47,8 @@ export async function YmapsTotalInit() {
     const allBilbords = [];
     const bilbordsArea = [];
     const cityFormat = [];
-    resultBunners.forEach((element, index) => {
-        if (element.name === 'БИЛБОРДЫ') {
+    resultBunners.forEach((element) => {
+        if (element.name === 'БИЛБОРД-ПСКОВ') {
             allBilbords.push(element);
         }
         if (element.name === 'БИЛБОРДЫ-ОБЛАСТЬ') {
@@ -66,7 +66,6 @@ export async function YmapsTotalInit() {
             center: [57.839935737922, 28.3041456872],
             zoom: 7
         });
-
 
         //Создаём коллекцию 
         let myCollection = new ymaps.GeoObjectCollection({}, {
@@ -90,18 +89,22 @@ export async function YmapsTotalInit() {
             myCollection.add(new ymaps.Placemark(array,
                 {
                     iconContent: title,
-                    balloonContentHeader: `<a href="object.html"><span id='${element.id}' style="display: block; max-width: 340px; ">${fullname}</span></a>`,
+                    balloonContentHeader: `<a href="object.php"><span id='${element.id}' style="display: block; max-width: 340px; ">${fullname}</span></a>`,
                     balloonContentBody: `<img src="./assets/images/object/${element.foto2}" height="170" width="340">`,
                     balloonContentFooter: `<span style="display: block; max-width: 340px;"> ${(element.text)}</span>`,
                 },
                 { preset: "islands#redStretchyIcon" }));
         });
 
+        myCollection.events.add('click', function (event) {
+            console.log('Marker clicked');
+            ballonClick(event);
+        });
+
         //вывод коллекции на карту
         map.geoObjects.add(myCollection);
-
-        // поиск всех типов баннеров + перезагрузка карты
-
+  
+        // функция поиска всех типов баннеров + перезагрузка карты
         function init(arrayObjects) {
 
 
@@ -124,16 +127,11 @@ export async function YmapsTotalInit() {
                 myCollection.add(new ymaps.Placemark(array,
                     {
                         iconContent: title,
-                        balloonContentHeader: `<a href="object.html"><span id='${element.id}' style="display: block; max-width: 340px; ">${fullname}</span></a>`,
+                        balloonContentHeader: `<a href="object.php"><span id='${element.id}' style="display: block; max-width: 340px; ">${fullname}</span></a>`,
                         balloonContentBody: `<img src="./assets/images/object/${element.foto2}" height="170" width="340">`,
                         balloonContentFooter: `<span style="display: block; max-width: 340px;"> ${(element.text)}</span>`,
                     },
                     { preset: "islands#redStretchyIcon" }));
-            });
-
-            myCollection.events.add('click', function (event) {
-                console.log('Marker clicked');
-                ballonClick(event);
             });
 
             //вывод коллекции на карту
@@ -182,16 +180,6 @@ export async function YmapsTotalInit() {
     }
     ymaps.ready(firstinit);
     colorTabs('all');
-
-
-
-
-
-
-
-
-    //яндекс карты 2.1 как перезагрузить карту после изменения коллекции меток
-
 }
 
 

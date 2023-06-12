@@ -22,11 +22,12 @@ export function activeTabs(){
     //перебираем и сравниваем с названиями табов
     let activeSlide = document.querySelector('.swiper-slide-active');
     let titles = activeSlide.querySelectorAll('.services__inner__gallery__list__category__item__title ');
-    titles.forEach(element => {
-        let title = element.textContent;
 
-        if(title == 'БИЛБОРДЫ'){
-            coloractive('БИЛБОРДЫ');
+    titles.forEach(element => {
+        let title = element.dataset.name;
+
+        if(title == 'БИЛБОРД-ПСКОВ'){
+            coloractive('БИЛБОРД-ПСКОВ');
         }
         else if(title == 'СИТИ-ФОРМАТ'){
             coloractive('СИТИ-ФОРМАТ');

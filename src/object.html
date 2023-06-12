@@ -5,3 +5,97 @@ title: Рекламное агентство Креатив
 <div class="insert__data">
     
 </div>
+<div class="icon">
+    <div class="container">
+        <picture class="icon__chat ">
+            <img class="animate__animated animate__swing" src="./assets/images/svg/Чат.svg" alt="icon"
+                id="button__chat">
+        </picture>
+    </div>
+</div>
+
+<section class="AB__chat" id="AB__chat">
+    <div class="AB__chat__inner">
+        <div class="AB__chat__inner__top">
+            <picture class="AB__chat__inner__top__operator">
+                <img src="./assets/images/svg/woman1.png" alt="AB-Chat">
+            </picture>
+            <div class="AB__chat__inner__top__col">
+                <div class="AB__chat__inner__top__main">
+                    <h2 class="AB__chat__inner__title">AB-Chat</h2>
+                    <a href="https://t.me/ABroskoStudio" class="AB__chat__inner__top__main__link"><img
+                            src="./assets/images/svg/TG.svg" alt="telegram"></a>
+                </div>
+                <h6 class="AB__chat__inner__top__col__operator">Оператор Мария онлайн</h6>
+            </div>
+            <img src="./assets/images/svg/Gnome-window-close.svg" alt="close" width="24" height="24"
+                class="AB__chat__inner__top__close">
+        </div>
+        <div class="AB__chat__inner__center">
+            <div class="AB__chat__inner__center__inner" id="box">
+
+                <!-- =====================Стартовое сообщение=================== -->
+                <div class="AB__chat__inner__center__bot">
+                    <!-- <picture>
+                            <img src="./assets/images/svg/imgBot.svg" alt="AB-bot">
+                        </picture> -->
+                    <span class="AB__chat__inner__center__bot__text" data-bot>Здравствуйте, здесь вы можете задать любой
+                        интересующий вопрос.</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="AB__chat__inner__bottom">
+            <input type="text" class="AB__chat__inner__bottom__text" placeholder="Введите сообщение"
+                data-input="people">
+            <picture data-sent="people">
+                <img src="./assets/images/svg/ArrowSend.svg" alt="AB-sent">
+            </picture>
+        </div>
+        <span class="AB__chat__inner__abrosko">
+            Бизнес мессенджер
+            <a href="https://abrosko-studio.ru/">ABrosko</a>
+        </span>
+    </div>
+</section>
+<div class="modalcallback fix__block" id="callback">
+    <img src="./assets/images/svg/close.svg" alt="close" class="modalcallback__close" data-close>
+    <div class="containersmall">
+        <div class="modalcallback__inner">
+            <h3 class="modalcallback__inner__title">Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
+            <form action="#" class="form" id="form" method="post" data-formcall autocomplete="off">
+                <div class="form__row">
+                    <label class="label__attention">
+                        <input type="text" autocomplete="off" name="name" class="modalcallback__inner__input input__half input-name"
+                            id="name" data-validate-field="name" placeholder="Ваше имя" required>
+                    </label>
+                    <label class="label__attention">
+                        <input type="text" autocomplete="off" name="surname" class="modalcallback__inner__input input__half input-surname"
+                            id="surname" data-validate-field="surname" placeholder="Ваша фамилия" required>
+                    </label>
+                </div>
+                <label class="label__attention">
+                    <input type="tel" autocomplete="off" name="tel" class="modalcallback__inner__input input-tel"
+                        id="tel" data-validate-field="tel" placeholder="Ваш номер телефона" required>
+                </label>
+                <label class="label__attention">
+                    <input type="email" autocomplete="off" name="email" class="modalcallback__inner__input input-email"
+                        id="email" data-validate-field="emaol" placeholder="Ваша почта" required>
+                </label>
+                <span class="modalcallback__inner__selecting">Выберите подходящий способ связи</span>
+
+                <div class="modalcallback__inner__box">
+                    <label for="call" class="modalcallback__inner__box__item">
+                        <input type="radio" id="call" name="callback" value="call"> Позвонить
+                    </label>
+                    <label for="Email" class="modalcallback__inner__box__item">
+                        <input type="radio" id="Email" name="callback" value="Email"> Email
+                    </label>
+                </div>
+                <button class="modalcallback__inner__form__button" type="submit">Отправить заявку</button>
+            </form>
+            <a href="politics.php" class="modalcallback__inner__politics">Оставляя заявку, вы соглашаетесь с политикой
+                конфиденциальности</a>
+        </div>
+    </div>
+</div>

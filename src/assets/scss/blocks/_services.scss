@@ -1,10 +1,10 @@
 .services {}
 
 .services__inner {
-    padding-bottom: 7.8rem;
+    padding-bottom: 3.8rem;
 
-    @include slider{
-        padding-bottom: 5rem;
+    @include slider {
+        padding-bottom: 0;
     }
 }
 
@@ -17,7 +17,7 @@
     color: #466BF8;
 
     @include for-desktop {
-    text-align: center;
+        text-align: center;
     }
 }
 
@@ -39,15 +39,15 @@
         margin: 0 auto;
     }
 
-    @include slider{
+    @include slider {
         margin: 0 auto 3.2rem;
     }
 
-    @include small-tablet{
+    @include small-tablet {
         max-width: 65rem;
     }
 
-    @include burger-header{
+    @include burger-header {
         max-width: none;
     }
 }
@@ -68,37 +68,39 @@
     cursor: pointer;
     margin-right: 1rem;
 
-    &:nth-child(4){
+    &:nth-child(4) {
         margin-right: 0;
     }
-    
 
-    @include small-tablet{
+
+    @include small-tablet {
         font-size: 12px;
         padding: 0.7rem 3.5rem;
         // white-space: nowrap;
     }
 
-    @include burger-header{
+    @include burger-header {
         padding: 0.5rem 2.5rem;
         border-radius: 1.5rem;
     }
 
-    @include mobile{
+    @include mobile {
         padding: 0.5rem 1.5rem;
     }
-    @include map465{
+
+    @include map465 {
         font-size: 10px;
         // padding: 0.5rem 1rem;
         // white-space: nowrap;
     }
-    @include small-mobile{
+
+    @include small-mobile {
         font-size: 9px;
         padding: 0.5rem 1rem;
     }
 }
 
-.active__tabs.services__inner__gallery__buttons__button{
+.active__tabs.services__inner__gallery__buttons__button {
     color: rgba(70, 107, 248, 1);
     border: 1px solid rgba(70, 107, 248, 1);
 }
@@ -106,43 +108,38 @@
 .services__inner__gallery__line {
     height: 0;
     border: 1px solid #D9D9D9;
-    margin-top: 4.9rem;
-    margin-bottom: 4.8rem;
+    margin-top: 2.9rem;
+    margin-bottom: 2.8rem;
 
-    @include slider{
-display: none;    }
+    @include slider {
+        display: none;
+    }
 }
 
 
 .swiper__services {
     padding: 0 5rem;
     max-height: 70rem;
-    max-width: 151.786rem;
+    max-width: 125.786rem;
 
-    @include slider{
-        padding: 0 3rem;
-    }
-
-    @include burger-header{
-        padding: 0 2.2rem;
+    @include slider {
+        padding: 0 3rem 5rem 3rem;
     }
 }
 
-.swiper-wrapper {}
 
-.swiper-slide {}
 
 .services__inner__gallery__list__category {
-    height: calc($index * 29.179);
+    height: calc($index * 23.179);
     max-height: 70rem;
-    min-height: 70rem;
+    min-height: 55.5rem;
 
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     gap: 4rem;
 
-    @include big-desktop{
+    @include big-desktop {
         gap: 2rem;
         min-height: auto;
     }
@@ -152,6 +149,7 @@ display: none;    }
     width: 48.5%;
     height: 100%;
 }
+
 .services__inner__gallery__list__category__right {
     width: 51.5%;
     height: 100%;
@@ -165,21 +163,17 @@ display: none;    }
     justify-content: space-between;
 
 
-    @include big-desktop{
+    @include big-desktop {
         gap: 1rem;
     }
 }
 
 .services__inner__gallery__list__category__right__row {
     height: 100%;
-    max-height: 34rem;
+    max-height: 27rem;
     display: flex;
     justify-content: space-between;
-    gap: 4rem;
-
-    @include big-desktop{
-        gap: 2rem;
-    }
+    gap: 2rem;
 }
 
 .services__inner__gallery__list__category__item {
@@ -196,15 +190,22 @@ display: none;    }
     max-height: 34rem;
     position: relative;
     overflow: hidden;
-    @include bg-cover;
+    @include bg-cover
+}
+.services__inner__gallery__list__category__item--area{
+    max-width: none;
 }
 
-.services__inner__gallery__list__category__item__mobile{
+.services__inner__gallery__list__category__item__mobile {
 
-    @include slider{
+    @include slider {
         max-width: none;
         height: 100%;
         min-height: calc($index*23);
+    }
+
+    @include small-mobile{
+        background-size: cover;
     }
 }
 
@@ -225,23 +226,27 @@ display: none;    }
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 21px;
     text-transform: uppercase;
     margin-bottom: 1rem;
 
     color: rgb(70, 107, 248);
     background: rgba(255, 255, 255, 0.1);
-     backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
 
 
-    @include big-desktop{
-        font-size: 3rem;
+    @include big-desktop {
+        font-size: 1.8rem;
     }
 
-    @include maps{
-        font-size: 2.5rem;
+    @include maps {
+        font-size: 1.6rem;
+    }
+
+    @include slider{
+        font-size: 2.2rem;
     }
 }
 
@@ -255,14 +260,15 @@ display: none;    }
     text-transform: capitalize;
     color: rgb(70, 107, 248);
     background: rgba(255, 255, 255, 0.8);
-     backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
-    @include big-desktop{
+    @include big-desktop {
         font-size: 1.6rem;
     }
-    @include for-desktop{
+
+    @include for-desktop {
         line-height: 1.4;
     }
 }
@@ -273,45 +279,63 @@ display: none;    }
     font-weight: 400;
     font-size: 14px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #fff;
     background-color: transparent;
     cursor: pointer;
     padding: 0.8rem 3.3rem;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #fff;
     border-radius: 26px;
     transition: all 0.3s ease-in-out;
 
-    @include tablet{
-        font-size: 1.1rem;
+    @include tablet {
+        font-size: 1.2rem;
         padding: 0.8rem 2rem;
+    }
+
+    @include slider{
+        padding: 1.2rem 3.3rem;
+        color: rgb(255, 255, 255);
+        border-color: rgb(255, 255, 255);
+        margin-left: 1.5rem;
     }
 }
 
-.services__inner__gallery__list__category__item__button:hover{
+.services__inner__gallery__list__category__item__button:hover {
     background-color: white;
     color: black;
 
 }
 
 .services__inner__bottom {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
+    display: flex;
+
+    @include slider{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: inherit;
+        backdrop-filter: blur(35px);
+        padding: 0.5rem 0;
+    }
 }
 
 .services__inner__gallery__list__category__item__title--big {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 34px;
     text-transform: uppercase;
     color: rgb(70, 107, 248);
     background: rgba(255, 255, 255, 0.1);
-     backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 0.8rem;
     text-align: center;
 
-    @include for-desktop{
-        font-size: 3.7rem;
+    @include for-desktop {
+        font-size: 2.5rem;
     }
 }
 
@@ -324,14 +348,14 @@ display: none;    }
     text-transform: capitalize;
     color: rgb(70, 107, 248);
     background: rgba(255, 255, 255, 0.8);
-     backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
 
 
-    @include big-desktop{
+    @include big-desktop {
         font-size: 2rem;
     }
 
-    @include for-desktop{
+    @include for-desktop {
         line-height: 1.4;
     }
 }
@@ -350,7 +374,7 @@ display: none;    }
     padding: 1rem 3.7rem;
     transition: all 0.3s ease-in-out;
 
-    @include tablet{
+    @include tablet {
         font-size: 1.2rem;
         padding: 0.8rem 2.2rem;
     }
@@ -358,23 +382,41 @@ display: none;    }
 
 .swiper-pagination {}
 
-.swiper-button-prev, .swiper-button-next {
-    @include burger-header{
+.swiper-button-prev,
+.swiper-button-next {
+    @include burger-header {
         height: 2rem;
         width: 2rem;
     }
 }
-.swiper-button-prev{
-    @include slider{
+
+.swiper-button-prev {
+    @include slider {
         left: var(--swiper-navigation-sides-offset, 0px);
     }
 }
-.swiper-button-next{
-    @include slider{
+
+.swiper-button-next {
+    @include slider {
         right: var(--swiper-navigation-sides-offset, 0px);
     }
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
+.swiper-button-next::after,
+.swiper-button-prev::after {
     display: none;
+}
+
+.mapslider{
+    width: 100%;
+    height: calc($index * 24);
+}
+.text__center{
+    margin: 0 auto;
+}
+.servises__nobackdrop{
+    backdrop-filter: blur(0);
+}
+.text__center__mobile{
+    margin: 0 auto 0.5rem;
 }

@@ -38,14 +38,14 @@ const path = {
         html: srcPath + "*.html",
         js: srcPath + "assets/js/*.js",
         css: srcPath + "assets/scss/*.scss",
-        images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+        images: srcPath + "assets/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     watch: {
         html: srcPath + "**/*.html",
         js: srcPath + "assets/js/**/*.js",
         css: srcPath + "assets/scss/**/*.scss",
-        images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+        images: srcPath + "assets/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     clean: "./" + distPath
@@ -160,6 +160,7 @@ function js(cb) {
             mode: "production",
             entry: {
                 app: './src/assets/js/firstpage/app.js',
+                chat: './src/assets/js/firstpage/chat.js',
                 main: './src/assets/js/secondpage/main.js',
                 object: './src/assets/js/object/object.js',
                 politics: './src/assets/js/object/politics.js',
@@ -203,6 +204,7 @@ function jsWatch(cb) {
             mode: "production",
             entry: {
                 app: './src/assets/js/firstpage/app.js',
+                chat: './src/assets/js/firstpage/chat.js',
                 main: './src/assets/js/secondpage/main.js',
                 object: './src/assets/js/object/object.js',
                 politics: './src/assets/js/object/politics.js',
