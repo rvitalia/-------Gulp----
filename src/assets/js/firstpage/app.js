@@ -49,7 +49,7 @@ export function swiperSlider() {
             }
             else {
                 if (element.dataset.filter == 'bilbord') {
-                    swiper.slideTo(1, 400, false);
+                    swiper.slideTo(0, 400, false);
                     doubleMapClick('bilbord-all'); 
                     coloractive('БИЛБОРД-ПСКОВ');
                 }
@@ -59,7 +59,7 @@ export function swiperSlider() {
                     coloractive('СИТИ-ФОРМАТ');
                 }
                 else if (element.dataset.filter == 'big') {
-                    swiper.slideTo(53, 400, false);
+                    swiper.slideTo(52, 400, false);
                     coloractive('СВЕТОДИОДНЫЙ ЭКРАН');
                 }
                 else if (element.dataset.filter == 'area') {
