@@ -19,13 +19,13 @@ function renderData(arrayBanners) {
                             
                                 <div class="services__inner__top">
                                     <h5
-                                        class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big"  data-name="${arrayBanners[i].name}">${arrayBanners[i].titlepresent}</h5>
+                                        class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big"  data-name="${arrayBanners[i].name}">${arrayBanners[i].title}</h5>
                                     <span
                                         class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">${arrayBanners[i].title}</span>
                                 </div>
                                 <div class="services__inner__bottom">
                                     <a href="./object.php" data-object 
-                                        class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big">подробнее</a>
+                                        class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big" target="_blank">подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -38,13 +38,13 @@ function renderData(arrayBanners) {
                             <div class="services__inner__gallery__list__category__right__row">
                                 <div class="services__inner__gallery__list__category__item" id="${arrayBanners[i + 1].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 1].foto3});">
                                     <div class="services__inner__top">
-                                        <h5 class="services__inner__gallery__list__category__item__title"  data-name="${arrayBanners[i + 1].name}">${arrayBanners[i + 1].titlepresent}</h5>
+                                        <h5 class="services__inner__gallery__list__category__item__title"  data-name="${arrayBanners[i + 1].name}">${arrayBanners[i + 1].title}</h5>
                                         <span
                                             class="services__inner__gallery__list__category__item__subtitle">${arrayBanners[i + 1].title}</span>
                                     </div>
                                     <div class="services__inner__bottom">
                                         <a href="./object.php" data-object 
-                                            class="services__inner__gallery__list__category__item__button">подробнее</a>
+                                            class="services__inner__gallery__list__category__item__button" target="_blank">подробнее</a>
                                     </div>
                                 </div>
             
@@ -53,13 +53,13 @@ function renderData(arrayBanners) {
             
                                 <div class="services__inner__gallery__list__category__item" id="${arrayBanners[i + 2].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 2].foto3});">
                                     <div class="services__inner__top">
-                                        <h5 class="services__inner__gallery__list__category__item__title"  data-name="${arrayBanners[i + 2].name}">${arrayBanners[i + 2].titlepresent}</h5>
+                                        <h5 class="services__inner__gallery__list__category__item__title"  data-name="${arrayBanners[i + 2].name}">${arrayBanners[i + 2].title}</h5>
                                         <span
                                             class="services__inner__gallery__list__category__item__subtitle">${arrayBanners[i + 2].title}</span>
                                     </div>
                                     <div class="services__inner__bottom">
                                         <a href="./object.php" data-object 
-                                            class="services__inner__gallery__list__category__item__button">подробнее</a>
+                                            class="services__inner__gallery__list__category__item__button" target="_blank">подробнее</a>
                                     </div>
                                 </div>
                             </div>
@@ -71,13 +71,13 @@ function renderData(arrayBanners) {
             
                                 <div class="services__inner__gallery__list__category__item" id="${arrayBanners[i + 3].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 3].foto3});">
                                     <div class="services__inner__top">
-                                        <h5 class="services__inner__gallery__list__category__item__title"  data-name="${arrayBanners[i + 3].name}">${arrayBanners[i + 3].titlepresent}</h5>
+                                        <h5 class="services__inner__gallery__list__category__item__title"  data-name="${arrayBanners[i + 3].name}">${arrayBanners[i + 3].title}</h5>
                                         <span
                                             class="services__inner__gallery__list__category__item__subtitle">${arrayBanners[i + 3].title}</span>
                                     </div>
                                     <div class="services__inner__bottom">
                                         <a href="./object.php" data-object 
-                                            class="services__inner__gallery__list__category__item__button">подробнее</a>
+                                            class="services__inner__gallery__list__category__item__button" target="_blank">подробнее</a>
                                     </div>
                                 </div>
             
@@ -86,13 +86,13 @@ function renderData(arrayBanners) {
             
                                 <div class="services__inner__gallery__list__category__item" id="${arrayBanners[i + 4].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 4].foto3}">
                                     <div class="services__inner__top">
-                                        <h5 class="services__inner__gallery__list__category__item__title"  data-name="${arrayBanners[i + 4].name}">${arrayBanners[i + 4].titlepresent}</h5>
+                                        <h5 class="services__inner__gallery__list__category__item__title"  data-name="${arrayBanners[i + 4].name}">${arrayBanners[i + 4].title}</h5>
                                         <span
                                             class="services__inner__gallery__list__category__item__subtitle">${arrayBanners[i + 4].title}</span>
                                     </div>
                                     <div class="services__inner__bottom">
                                         <a href="./object.php" data-object 
-                                            class="services__inner__gallery__list__category__item__button">подробнее</a>
+                                            class="services__inner__gallery__list__category__item__button" target="_blank">подробнее</a>
                                     </div>
                                 </div>
                             </div>
@@ -105,6 +105,92 @@ function renderData(arrayBanners) {
                 swiperSlides.insertAdjacentHTML('beforeend', swiperSlide);
             }
         }
+        //функция для последнего слайда городских бордов с четырьмя изображениями
+
+        function renderForBilbordLast(index1, index2) {
+            for (let i = index1; i < arrayBanners.length - index2; i += 4) {
+                const swiperSlide = `<div class="swiper-slide">
+                    <!-- ---------------------------slide -------------------------- -->
+                    <div class="services__inner__gallery__list__category">
+                        <div class="services__inner__gallery__list__category__left">
+                            <!-- --------------------------- item -------------------------- -->
+            
+                            <div class="services__inner__gallery__list__category__item services__inner__gallery__list__category__item--big" id="${arrayBanners[i].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i].foto3});">
+                            
+                                <div class="services__inner__top">
+                                    <h5
+                                        class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big"  data-name="${arrayBanners[i].name}">${arrayBanners[i].title}</h5>
+                                    <span
+                                        class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">${arrayBanners[i].title}</span>
+                                </div>
+                                <div class="services__inner__bottom">
+                                    <a href="./object.php" data-object 
+                                        class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big" target="_blank">подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+            
+            
+                        <div class="services__inner__gallery__list__category__right">
+                            <!-- --------------------------- item -------------------------- -->
+            
+                            <div class="services__inner__gallery__list__category__right__row">
+                                <div class="services__inner__gallery__list__category__item services__inner__gallery__list__category__item--area" id="${arrayBanners[i + 1].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 1].foto3});">
+                                    <div class="services__inner__top">
+                                        <h5 class="services__inner__gallery__list__category__item__title  data-name="${arrayBanners[i + 1].name}"">${arrayBanners[i + 1].title}</h5>
+                                        <span
+                                            class="services__inner__gallery__list__category__item__subtitle">${arrayBanners[i + 1].title}</span>
+                                    </div>
+                                    <div class="services__inner__bottom">
+                                        <a href="./object.php" data-object 
+                                            class="services__inner__gallery__list__category__item__button" target="_blank">подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+            
+            
+                            <div class="services__inner__gallery__list__category__right__row">
+                                <!-- --------------------------- item -------------------------- -->
+            
+            
+                                <div class="services__inner__gallery__list__category__item" id="${arrayBanners[i + 2].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 2].foto3});">
+                                    <div class="services__inner__top">
+                                        <h5 class="services__inner__gallery__list__category__item__title"  data-name="${arrayBanners[i + 2].name}">${arrayBanners[i + 2].title}</h5>
+                                        <span
+                                            class="services__inner__gallery__list__category__item__subtitle">${arrayBanners[i + 2].title}</span>
+                                    </div>
+                                    <div class="services__inner__bottom">
+                                        <a href="./object.php" data-object 
+                                            class="services__inner__gallery__list__category__item__button" target="_blank">подробнее</a>
+                                    </div>
+                                </div>
+            
+                                <!-- --------------------------- item -------------------------- -->
+            
+            
+                                <div class="services__inner__gallery__list__category__item" id="${arrayBanners[i + 3].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 3].foto3}">
+                                    <div class="services__inner__top">
+                                        <h5 class="services__inner__gallery__list__category__item__title"  data-name="${arrayBanners[i + 3].name}">${arrayBanners[i + 3].title}</h5>
+                                        <span
+                                            class="services__inner__gallery__list__category__item__subtitle">${arrayBanners[i + 3].title}</span>
+                                    </div>
+                                    <div class="services__inner__bottom">
+                                        <a href="./object.php" data-object 
+                                            class="services__inner__gallery__list__category__item__button" target="_blank">подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>`;
+
+                //добавляем в конец нашего списка
+                swiperSlides.insertAdjacentHTML('beforeend', swiperSlide);
+            }
+        }
+
         //отдельная функция для последнего слайда билборд-область с тремя бордами
         function renderForSlideArea(index1, index2) {
 
@@ -119,13 +205,13 @@ function renderData(arrayBanners) {
                             
                                 <div class="services__inner__top">
                                     <h5
-                                        class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big"  data-name="${arrayBanners[i].name}">${arrayBanners[i].titlepresent}</h5>
+                                        class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big"  data-name="${arrayBanners[i].name}">${arrayBanners[i].title}</h5>
                                     <span
                                         class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">${arrayBanners[i].title}</span>
                                 </div>
                                 <div class="services__inner__bottom">
                                     <a href="./object.php" data-object 
-                                        class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big">подробнее</a>
+                                        class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big" target="_blank">подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -138,13 +224,13 @@ function renderData(arrayBanners) {
                             <div class="services__inner__gallery__list__category__right__row">
                                 <div class="services__inner__gallery__list__category__item services__inner__gallery__list__category__item--area" id="${arrayBanners[i + 1].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 1].foto3});">
                                     <div class="services__inner__top">
-                                        <h5 class="services__inner__gallery__list__category__item__title  data-name="${arrayBanners[i + 1].name}"">${arrayBanners[i + 1].titlepresent}</h5>
+                                        <h5 class="services__inner__gallery__list__category__item__title  data-name="${arrayBanners[i + 1].name}"">${arrayBanners[i + 1].title}</h5>
                                         <span
                                             class="services__inner__gallery__list__category__item__subtitle">${arrayBanners[i + 1].title}</span>
                                     </div>
                                     <div class="services__inner__bottom">
                                         <a href="./object.php" data-object 
-                                            class="services__inner__gallery__list__category__item__button text__center">подробнее</a>
+                                            class="services__inner__gallery__list__category__item__button" target="_blank">подробнее</a>
                                     </div>
                                 </div>
                             </div>
@@ -157,13 +243,13 @@ function renderData(arrayBanners) {
             
                                 <div class="services__inner__gallery__list__category__item services__inner__gallery__list__category__item--area" id="${arrayBanners[i + 2].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 2].foto3});">
                                     <div class="services__inner__top">
-                                        <h5 class="services__inner__gallery__list__category__item__title  data-name="${arrayBanners[i + 2].name}"">${arrayBanners[i + 2].titlepresent}</h5>
+                                        <h5 class="services__inner__gallery__list__category__item__title  data-name="${arrayBanners[i + 2].name}"">${arrayBanners[i + 2].title}</h5>
                                         <span
                                             class="services__inner__gallery__list__category__item__subtitle">${arrayBanners[i + 2].title}</span>
                                     </div>
                                     <div class="services__inner__bottom">
                                         <a href="./object.php" data-object 
-                                            class="services__inner__gallery__list__category__item__button text__center">подробнее</a>
+                                            class="services__inner__gallery__list__category__item__button" target="_blank">подробнее</a>
                                     </div>
                                 </div>            
                             </div>
@@ -176,21 +262,72 @@ function renderData(arrayBanners) {
                 swiperSlides.insertAdjacentHTML('beforeend', swiperSlide);
             }
         }
+
+        //отдельная функция для последнего слайда сити борд с двумя бордами
+        function renderForSliderCity(index1, index2) {
+
+            for (let i = index1; i < arrayBanners.length - index2; i += 2) {
+                const swiperSlide = `<div class="swiper-slide">
+            <!-- ---------------------------slide -------------------------- -->
+            <div class="services__inner__gallery__list__category">
+                <div class="services__inner__gallery__list__category__left">
+                    <!-- --------------------------- item -------------------------- -->
+    
+                    <div class="services__inner__gallery__list__category__item services__inner__gallery__list__category__item--big" id="${arrayBanners[i].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i].foto3});">
+                    
+                        <div class="services__inner__top">
+                            <h5
+                                class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big"  data-name="${arrayBanners[i].name}">${arrayBanners[i].title}</h5>
+                            <span
+                                class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">${arrayBanners[i].title}</span>
+                        </div>
+                        <div class="services__inner__bottom">
+                            <a href="./object.php" data-object 
+                                class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big" target="_blank">подробнее</a>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="services__inner__gallery__list__category__left">
+                    <!-- --------------------------- item -------------------------- -->
+                    <div class="services__inner__gallery__list__category__item services__inner__gallery__list__category__item--big" id="${arrayBanners[i + 1].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 1].foto3});">
+                        <div class="services__inner__top">
+                            <h5 class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big" data-name="${arrayBanners[i + 1].name}">${arrayBanners[i + 1].title}</h5>
+                            <span
+                                class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">${arrayBanners[i + 1].title}</span>
+                        </div>
+                        <div class="services__inner__bottom">
+                            <a href="./object.php" data-object 
+                                class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big" target="_blank">подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+
+                //добавляем в конец нашего списка
+                swiperSlides.insertAdjacentHTML('beforeend', swiperSlide);
+            }
+        }
+
         //создаем слайды в нужной нам очередности
-        const bilbordPresent = addSlide('11А1.jpg', 'bilbordmap', 'БИЛБОРД-ПСКОВ', false);
+        const bilbordPresent = addSlide('11А1.jpg', 'bilbordmap', 'БИЛБОРДЫ-ПСКОВ', false);
         swiperSlides.insertAdjacentHTML('beforeend', bilbordPresent);
-        renderForSlider(0, 18);//второе значение - это от максимальной длины массива отнять нужное количество
+        renderForSlider(0, 22);//второе значение - это от максимальной длины массива отнять нужное количество
+        renderForBilbordLast(30, 18);
 
         const bilbordAreaPresent = addSlide('5А.jpg', 'bilbordareamap', 'БИЛБОРДЫ-ОБЛАСТЬ', false);
         swiperSlides.insertAdjacentHTML('beforeend', bilbordAreaPresent);
-        renderForSlider(35, 12);
-        renderForSlideArea(40, 9);
+        renderForSlider(34, 12);
+        renderForSlideArea(39, 9);
 
 
-        const cityFormatPresent = addSlide('city.jpg', 'mapcity', 'СИТИ-ФОРМАТ', false);
+        const cityFormatPresent = addSlide('city.jpg', 'mapcity', 'СИТИ-ФОРМАТЫ', false);
         swiperSlides.insertAdjacentHTML('beforeend', cityFormatPresent);
-        renderForSlider(43, 4);
-        renderForSlideArea(48, 1);
+        // renderForSlider(42, 4);
+        renderForBilbordLast(42, 5);
+        renderForSlideArea(46, 1)
+        // renderForSliderCity(47, 1);
 
         const bigScreenPresent = addSlide('ekran3.jpg', 'mapbigscreen', 'СВЕТОДИОДНЫЙ ЭКРАН', true);
         swiperSlides.insertAdjacentHTML('beforeend', bigScreenPresent);
@@ -202,13 +339,13 @@ function renderData(arrayBanners) {
             const swiperSlide = ` <div class="swiper-slide">
                 <div class="services__inner__gallery__list__category__item services__inner__gallery__list__category__item__mobile" id="${element.id}" style="background-image: url(./assets/images/mobile/${element.foto4});">
                 <div class="services__inner__top">
-                    <h5 class="services__inner__gallery__list__category__item__title" data-name="${element.name}">${element.titlepresent}</h5>
+                    <h5 class="services__inner__gallery__list__category__item__title" data-name="${element.name}">${element.title}</h5>
                     <span
                         class="services__inner__gallery__list__category__item__subtitle">${element.title}</span>
                 </div>
                 <div class="services__inner__bottom servises__nobackdrop">
                     <a href="./object.php" data-object 
-                        class="services__inner__gallery__list__category__item__button text__center__mobile">подробнее</a>
+                        class="services__inner__gallery__list__category__item__button text__center__mobile" target="_blank">подробнее</a>
                 </div>
             </div>
         </div>`;
@@ -273,6 +410,9 @@ export async function addSlideCity(mapsName, arrayType) {
             myCollection.add(new ymaps.Placemark(array,
                 {
                     iconContent: title,
+                    balloonContentHeader: `<a href="object.php"><span id='${element.id}' style="display: block; max-width: 340px; ">${fullname}</span></a>`,
+                    balloonContentBody: `<img src="./assets/images/object/${element.foto2}" height="170" width="340">`,
+                    balloonContentFooter: `<span class="baloon__footer__service" style="display: block; max-width: 340px;"> ${(element.text)}</span>`,
                 },
                 { preset: "islands#redStretchyIcon" }));
 
@@ -300,13 +440,13 @@ function addSlide(name, mapName, title, flag) {
                 
                     <div class="services__inner__top">
                         <h5
-                            class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big" data-name="${title}">${title}</h5>
+                            class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big services__inner__gallery__list__category__item__title__present" data-name="${title}">${title}</h5>
                             <!-- <span
                             class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">Сити-формат №13. Россия, г.Псков, ул.Советская напротив д. №7</span>-->
                     </div>
                     <div class="services__inner__bottom">
                     <!-- <a href="./object.php" data-object 
-                            class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big">подробнее</a>-->
+                            class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big" target="_blank">подробнее</a>-->
                     </div>
                 </div>
             </div>
@@ -323,7 +463,7 @@ function addSlide(name, mapName, title, flag) {
         </div>`;
         return swiperSlide;
     }
-    else{
+    else {
         const swiperSlide = `
         <div class="swiper-slide">
         <!-- ---------------------------slide -------------------------- -->
@@ -335,12 +475,12 @@ function addSlide(name, mapName, title, flag) {
                 
                     <div class="services__inner__top">
                         <h5
-                            class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big" data-name="${title}">${title}</h5>
+                            class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big services__inner__gallery__list__category__item__title__present" data-name="${title}">${title}</h5>
                             <!-- <span class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">Сити-формат №13. Россия, г.Псков, ул.Советская напротив д. №7</span>-->
                     </div>
                     <div class="services__inner__bottom">
                      <a href="./object.php" data-object 
-                            class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big">подробнее</a>
+                            class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big" target="_blank">подробнее</a>
                     </div>
                 </div>
             </div>
@@ -383,7 +523,7 @@ async function loadDataBanner(typeName) {
 export function loadMaps() {
     //загружаем карты на все презентационные слайды(получение данных через функцию fetch и вывод и передача полученных данных в функцию отрисовки карт)
 
-    loadDataBanner('БИЛБОРД-ПСКОВ').then(data => {
+    loadDataBanner('БИЛБОРДЫ-ПСКОВ').then(data => {
         addSlideCity('bilbordmap', data);
         // console.log(data);
     }).catch(error => {
@@ -397,7 +537,7 @@ export function loadMaps() {
         console.error(error);
     });
 
-    loadDataBanner('СИТИ-ФОРМАТ').then(data => {
+    loadDataBanner('СИТИ-ФОРМАТЫ').then(data => {
         addSlideCity('mapcity', data);
         // console.log(data);
     }).catch(error => {

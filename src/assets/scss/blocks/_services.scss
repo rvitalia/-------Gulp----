@@ -226,27 +226,27 @@
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 21px;
+    font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 1rem;
 
-    color: rgb(70, 107, 248);
+    color: #000;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(35px);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-align: center;
+    text-align: left;
 
 
     @include big-desktop {
-        font-size: 1.8rem;
+        font-size: 1.05rem;
     }
 
     @include maps {
-        font-size: 1.6rem;
+        font-size: 0.9rem;
     }
 
     @include slider{
-        font-size: 2.2rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -277,15 +277,15 @@
     font-family: 'Viga';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    text-transform: uppercase;
+    font-size: 12px;
     color: #fff;
     background-color: transparent;
     cursor: pointer;
-    padding: 0.8rem 3.3rem;
+    padding: 0.8rem 1.4rem;
     border: 1px solid #fff;
-    border-radius: 26px;
+    border-radius: 12px;
     transition: all 0.3s ease-in-out;
+    text-transform: capitalize;
 
     @include tablet {
         font-size: 1.2rem;
@@ -307,7 +307,7 @@
 }
 
 .services__inner__bottom {
-    margin-bottom: 0rem;
+    margin-bottom: 0.5rem;
     display: flex;
 
     @include slider{
@@ -325,17 +325,17 @@
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 34px;
+    font-size: 22px;
     text-transform: uppercase;
-    color: rgb(70, 107, 248);
+    color: #000;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(35px);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 0.8rem;
-    text-align: center;
+    text-align: left;
 
     @include for-desktop {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
     }
 }
 
@@ -365,13 +365,11 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
-    text-transform: uppercase;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
-    border-radius: 26px;
+    border-radius: 12px;
     background-color: transparent;
-    padding: 1rem 3.7rem;
+    padding: 0.8rem 1.3rem;
     transition: all 0.3s ease-in-out;
 
     @include tablet {
@@ -379,8 +377,13 @@
         padding: 0.8rem 2.2rem;
     }
 }
+.services__inner__gallery__list__category__item__title__present{
+    font-size: 36px;
+    color: #466BF8;
+    text-align: center;
+    font-weight: 700;
+}
 
-.swiper-pagination {}
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -419,4 +422,7 @@
 }
 .text__center__mobile{
     margin: 0 auto 0.5rem;
+}
+.baloon__footer__service{
+    line-height: 1;
 }

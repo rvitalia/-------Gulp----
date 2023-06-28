@@ -65,7 +65,9 @@ footer {
 
         &:nth-child(1){
             @include small-mobile{
-                width: 15rem;
+                width: 20rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
         }
 

@@ -26,11 +26,11 @@ export function activeTabs(){
     titles.forEach(element => {
         let title = element.dataset.name;
 
-        if(title == 'БИЛБОРД-ПСКОВ'){
-            coloractive('БИЛБОРД-ПСКОВ');
+        if(title == 'БИЛБОРДЫ-ПСКОВ'){
+            coloractive('БИЛБОРДЫ-ПСКОВ');
         }
-        else if(title == 'СИТИ-ФОРМАТ'){
-            coloractive('СИТИ-ФОРМАТ');
+        else if(title == 'СИТИ-ФОРМАТЫ'){
+            coloractive('СИТИ-ФОРМАТЫ');
         }
         else if(title == 'СВЕТОДИОДНЫЙ ЭКРАН'){
             coloractive('СВЕТОДИОДНЫЙ ЭКРАН');

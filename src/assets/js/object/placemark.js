@@ -48,13 +48,13 @@ export async function YmapsTotalInit() {
     const bilbordsArea = [];
     const cityFormat = [];
     resultBunners.forEach((element) => {
-        if (element.name === 'БИЛБОРД-ПСКОВ') {
+        if (element.name === 'БИЛБОРДЫ-ПСКОВ') {
             allBilbords.push(element);
         }
         if (element.name === 'БИЛБОРДЫ-ОБЛАСТЬ') {
             bilbordsArea.push(element);
         }
-        if (element.name === 'СИТИ-ФОРМАТ') {
+        if (element.name === 'СИТИ-ФОРМАТЫ') {
             cityFormat.push(element);
         }
 

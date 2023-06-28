@@ -31,7 +31,7 @@ export async function renderDataobject(Id) {
         const objectPage = `
         <div class="container container-object">
             <ul class="breadcrump">
-                <li>Главная</li>
+                <li><a href="./index.php#services">Главная</a></li>
                 <li>${currentObject.title}</li>
             </ul>
         </div>

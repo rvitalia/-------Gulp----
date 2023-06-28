@@ -32,11 +32,11 @@ export function swiperSlider() {
             if (window.innerWidth >= 900) {
                 if (element.dataset.filter == 'bilbord') {
                     swiper.slideTo(0, 400, false);
-                    coloractive('БИЛБОРД-ПСКОВ');
+                    coloractive('БИЛБОРДЫ-ПСКОВ');
                 }
                 else if (element.dataset.filter == 'city') {
                     swiper.slideTo(11, 400, false)
-                    coloractive('СИТИ-ФОРМАТ');
+                    coloractive('СИТИ-ФОРМАТЫ');
                 }
                 else if (element.dataset.filter == 'big') {
                     swiper.slideTo(15, 400, false);
@@ -51,19 +51,19 @@ export function swiperSlider() {
                 if (element.dataset.filter == 'bilbord') {
                     swiper.slideTo(0, 400, false);
                     doubleMapClick('bilbord-all'); 
-                    coloractive('БИЛБОРД-ПСКОВ');
+                    coloractive('БИЛБОРДЫ-ПСКОВ');
                 }
                 else if (element.dataset.filter == 'city') {
-                    swiper.slideTo(43, 400, false);
+                    swiper.slideTo(42, 400, false);
                     doubleMapClick('city-format'); 
-                    coloractive('СИТИ-ФОРМАТ');
+                    coloractive('СИТИ-ФОРМАТЫ');
                 }
                 else if (element.dataset.filter == 'big') {
-                    swiper.slideTo(52, 400, false);
+                    swiper.slideTo(51, 400, false);
                     coloractive('СВЕТОДИОДНЫЙ ЭКРАН');
                 }
                 else if (element.dataset.filter == 'area') {
-                    swiper.slideTo(35, 400, false);
+                    swiper.slideTo(34, 400, false);
                     doubleMapClick('bilbord-area'); 
                     coloractive('БИЛБОРДЫ-ОБЛАСТЬ');
                 }
