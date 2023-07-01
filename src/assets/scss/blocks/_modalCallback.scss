@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
     max-width: 697px;
-    max-height: 632.77px;
+    max-height: 522.77px;
 
     background: #FFFFFF;
     border: 1px solid #466BF8;
@@ -241,4 +241,12 @@
 
 .just-validate-error-label {
     font-size: 1.5rem;
+}
+.disabled{
+    background-color: grey;
+    border-color: grey;
+}
+.disabled.modalcallback__inner__form__button:hover {
+    color: red;
+    background-color: grey;
 }

@@ -1,6 +1,6 @@
 import { activeTabs } from "./activeTabs";
 import { swiperSlider } from "./app";
-import { sendData } from "./data-object";
+import { sendData, sendDataList } from "./data-object";
 
 function renderData(arrayBanners) {
     const swiperSlides = document.querySelector('.swiper-wrapper');
@@ -263,76 +263,89 @@ function renderData(arrayBanners) {
             }
         }
 
-        //отдельная функция для последнего слайда сити борд с двумя бордами
-        function renderForSliderCity(index1, index2) {
+        //создаем список банеров
 
-            for (let i = index1; i < arrayBanners.length - index2; i += 2) {
-                const swiperSlide = `<div class="swiper-slide">
-            <!-- ---------------------------slide -------------------------- -->
-            <div class="services__inner__gallery__list__category">
-                <div class="services__inner__gallery__list__category__left">
-                    <!-- --------------------------- item -------------------------- -->
-    
-                    <div class="services__inner__gallery__list__category__item services__inner__gallery__list__category__item--big" id="${arrayBanners[i].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i].foto3});">
-                    
-                        <div class="services__inner__top">
-                            <h5
-                                class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big"  data-name="${arrayBanners[i].name}">${arrayBanners[i].title}</h5>
-                            <span
-                                class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">${arrayBanners[i].title}</span>
-                        </div>
-                        <div class="services__inner__bottom">
-                            <a href="./object.php" data-object 
-                                class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big" target="_blank">подробнее</a>
-                        </div>
-                    </div>
-                </div>
-    
-    
-                <div class="services__inner__gallery__list__category__left">
-                    <!-- --------------------------- item -------------------------- -->
-                    <div class="services__inner__gallery__list__category__item services__inner__gallery__list__category__item--big" id="${arrayBanners[i + 1].id}" style="background-image: url(./assets/images/creativSlide/${arrayBanners[i + 1].foto3});">
-                        <div class="services__inner__top">
-                            <h5 class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big" data-name="${arrayBanners[i + 1].name}">${arrayBanners[i + 1].title}</h5>
-                            <span
-                                class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">${arrayBanners[i + 1].title}</span>
-                        </div>
-                        <div class="services__inner__bottom">
-                            <a href="./object.php" data-object 
-                                class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big" target="_blank">подробнее</a>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
 
-                //добавляем в конец нашего списка
-                swiperSlides.insertAdjacentHTML('beforeend', swiperSlide);
+        async function createSliderData() {
+            try {
+                await loadDataBanner('БИЛБОРДЫ-ПСКОВ').then(data => {
+                    let list = '';
+                    data.forEach(element => {
+                        list += `<li><a data-list_object="${element.id}" target="_blank" href="./object.php">${element.titleA}</a></li>
+                        <li><a data-list_object="${element.id}" target="_blank" href="./object.php">${element.titleB}</a></li>`;
+                    });
+
+                    //создаем слайды в нужной нам очередности
+                    const bilbordPresent = addSlide('11А1.jpg', 'bilbordmap', 'БИЛБОРДЫ-ПСКОВ', false, list);
+                    swiperSlides.insertAdjacentHTML('beforeend', bilbordPresent);
+                    renderForSlider(0, 22);//второе значение - это от максимальной длины массива отнять нужное количество
+                    renderForBilbordLast(30, 18);
+                });
+
+
+                await loadDataBanner('БИЛБОРДЫ-ОБЛАСТЬ').then(data => {
+                    let list = '';
+                    data.forEach(element => {
+                        list += `<li><a data-list_object="${element.id}" target="_blank" href="./object.php">${element.title}</a></li>
+                        <li><a data-list_object="${element.id}" target="_blank" href="./object.php">${element.title}</a></li>`;
+                    });
+
+                    const bilbordAreaPresent = addSlide('5А.jpg', 'bilbordareamap', 'БИЛБОРДЫ-ОБЛАСТЬ', false, list);
+                    swiperSlides.insertAdjacentHTML('beforeend', bilbordAreaPresent);
+                    renderForSlider(34, 12);
+                    renderForSlideArea(39, 9);
+                });
+
+
+                await loadDataBanner('СИТИ-ФОРМАТЫ').then(data => {
+                    let list = '';
+                    data.forEach(element => {
+                        list += `<li><a data-list_object="${element.id}" target="_blank" href="./object.php">${element.titleA}</a></li>
+                        <li><a data-list_object="${element.id}" target="_blank" href="./object.php">${element.titleB}</a></li>`;
+                    });
+
+                    const cityFormatPresent = addSlide('city.jpg', 'mapcity', 'СИТИ-ФОРМАТЫ', false, list);
+                    swiperSlides.insertAdjacentHTML('beforeend', cityFormatPresent);
+                    renderForBilbordLast(42, 5);
+                    renderForSlideArea(46, 1);
+                });
+
+                await loadDataBanner('СВЕТОДИОДНЫЙ ЭКРАН').then(data => {
+                    let list = '';
+                    data.forEach(element => {
+                        list += `<li><a data-list_object="${element.id}" target="_blank" href="./object.php">${element.titleA}</a></li>`;
+                    });
+                    const bigScreenPresent = addSlide('ekran3.jpg', 'mapbigscreen', 'СВЕТОДИОДНЫЙ ЭКРАН', true, list);
+                    swiperSlides.insertAdjacentHTML('beforeend', bigScreenPresent);
+                });
+
+                // ======загружаем все остальное после загрузки всех данных для слайдера ========
+
+
+                // загружаем карты
+                await loadMaps();
+                await swiperSlider();
+                //запуск первый раз без нажатия стрелок
+                await activeTabs();
+                //запускаем функцию передачи id с листа объектов
+                await sendDataList();
+
+                //при нажатии стрелок
+                let arrows = document.querySelectorAll('[data-arrow]');
+                arrows.forEach(element => {
+                    element.addEventListener('click', () => {
+                        setTimeout(function () {
+                            activeTabs();
+                        }, 100);
+                    })
+                });
+            } catch (error) {
+                console.error(error);
             }
         }
-
-        //создаем слайды в нужной нам очередности
-        const bilbordPresent = addSlide('11А1.jpg', 'bilbordmap', 'БИЛБОРДЫ-ПСКОВ', false);
-        swiperSlides.insertAdjacentHTML('beforeend', bilbordPresent);
-        renderForSlider(0, 22);//второе значение - это от максимальной длины массива отнять нужное количество
-        renderForBilbordLast(30, 18);
-
-        const bilbordAreaPresent = addSlide('5А.jpg', 'bilbordareamap', 'БИЛБОРДЫ-ОБЛАСТЬ', false);
-        swiperSlides.insertAdjacentHTML('beforeend', bilbordAreaPresent);
-        renderForSlider(34, 12);
-        renderForSlideArea(39, 9);
-
-
-        const cityFormatPresent = addSlide('city.jpg', 'mapcity', 'СИТИ-ФОРМАТЫ', false);
-        swiperSlides.insertAdjacentHTML('beforeend', cityFormatPresent);
-        // renderForSlider(42, 4);
-        renderForBilbordLast(42, 5);
-        renderForSlideArea(46, 1)
-        // renderForSliderCity(47, 1);
-
-        const bigScreenPresent = addSlide('ekran3.jpg', 'mapbigscreen', 'СВЕТОДИОДНЫЙ ЭКРАН', true);
-        swiperSlides.insertAdjacentHTML('beforeend', bigScreenPresent);
-
-        loadMaps();
+        createSliderData().catch(error => {
+            console.error(error);
+        });
     }
     else {
         arrayBanners.forEach(element => {
@@ -353,6 +366,18 @@ function renderData(arrayBanners) {
             //добавляем в конец нашего списка
             swiperSlides.insertAdjacentHTML('beforeend', swiperSlide);
         });
+        swiperSlider();
+        //запуск первый раз без нажатия стрелок
+        activeTabs();
+        //при нажатии стрелок
+        let arrows = document.querySelectorAll('[data-arrow]');
+        arrows.forEach(element => {
+            element.addEventListener('click', () => {
+                setTimeout(function () {
+                    activeTabs();
+                }, 100);
+            })
+        });
     }
 }
 
@@ -360,20 +385,7 @@ export async function loadData() {
     const dataBanners = await fetch('./assets/images/data.json');
     const resultBanners = await dataBanners.json();
     renderData(resultBanners);
-    // return resultBanners;
-    swiperSlider();
-    //подсветка active tabs
-    //запуск первый раз без нажатия стрелок
-    activeTabs();
-    //при нажатии стрелок
-    let arrows = document.querySelectorAll('[data-arrow]');
-    arrows.forEach(element => {
-        element.addEventListener('click', () => {
-            setTimeout(function () {
-                activeTabs();
-            }, 100);
-        })
-    });
+
     //при нажатии на кнопку подробнее передать id объекта
     sendData();
 }
@@ -426,9 +438,12 @@ export async function addSlideCity(mapsName, arrayType) {
     ymaps.ready(cityInit);
 }
 
-function addSlide(name, mapName, title, flag) {
+function addSlide(name, mapName, title, flag, array) {
 
     if (flag == false) {
+
+
+
         const swiperSlide = `
         <div class="swiper-slide">
         <!-- ---------------------------slide -------------------------- -->
@@ -441,8 +456,7 @@ function addSlide(name, mapName, title, flag) {
                     <div class="services__inner__top">
                         <h5
                             class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big services__inner__gallery__list__category__item__title__present" data-name="${title}">${title}</h5>
-                            <!-- <span
-                            class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">Сити-формат №13. Россия, г.Псков, ул.Советская напротив д. №7</span>-->
+                            <ul class="services__banner__list">${array}</ul>
                     </div>
                     <div class="services__inner__bottom">
                     <!-- <a href="./object.php" data-object 
@@ -476,8 +490,8 @@ function addSlide(name, mapName, title, flag) {
                     <div class="services__inner__top">
                         <h5
                             class="services__inner__gallery__list__category__item__title services__inner__gallery__list__category__item__title--big services__inner__gallery__list__category__item__title__present" data-name="${title}">${title}</h5>
-                            <!-- <span class="services__inner__gallery__list__category__item__subtitle services__inner__gallery__list__category__item__subtitle--big">Сити-формат №13. Россия, г.Псков, ул.Советская напротив д. №7</span>-->
-                    </div>
+                            <ul class="services__banner__list">${array}</ul>
+                            </div>
                     <div class="services__inner__bottom">
                      <a href="./object.php" data-object 
                             class="services__inner__gallery__list__category__item__button services__inner__gallery__list__category__item__button--big" target="_blank">подробнее</a>
@@ -502,7 +516,7 @@ function addSlide(name, mapName, title, flag) {
 
 
 
-async function loadDataBanner(typeName) {
+export async function loadDataBanner(typeName) {
     // загрузка данных всех банеров
 
     const dataBanners = await fetch('./assets/images/data.json');
@@ -520,7 +534,7 @@ async function loadDataBanner(typeName) {
 }
 
 
-export function loadMaps() {
+export async function loadMaps() {
     //загружаем карты на все презентационные слайды(получение данных через функцию fetch и вывод и передача полученных данных в функцию отрисовки карт)
 
     loadDataBanner('БИЛБОРДЫ-ПСКОВ').then(data => {

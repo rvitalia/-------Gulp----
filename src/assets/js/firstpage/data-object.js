@@ -13,6 +13,16 @@ export function sendData() {
     });
 }
 
+export async function sendDataList(){
+    const listObjects = document.querySelectorAll('[data-list_object]');
+    listObjects.forEach(element => {
+        element.addEventListener('click', ()=>{
+            let idObject = element.dataset.list_object;
+            localStorage.setItem('id', JSON.stringify(idObject));
+        })
+    });
+}
+
 export async function renderDataobject(Id) {
     const dataBanners = await fetch('./assets/images/data.json');
     const resultBanners = await dataBanners.json();

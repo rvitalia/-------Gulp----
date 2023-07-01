@@ -59,17 +59,15 @@ title: Разработка, изготовление и размещение н
         <div class="services__inner">
             <h2 class="services__inner__title">Услуги</h2>
             <div class="services__inner__gallery">
-
-
                 <div class="services__inner__gallery__buttons">
-                    <button type="button" class="services__inner__gallery__buttons__button"
+                    <button type="button" class="services__inner__gallery__buttons__button" data-select_list
                         data-filter="city">СИТИ-ФОРМАТЫ</button>
-                    <button type="button" class="services__inner__gallery__buttons__button"
+                    <button type="button" class="services__inner__gallery__buttons__button" data-select_list
                         data-filter="area">БИЛБОРДЫ-ОБЛАСТЬ</button>
 
-                    <button type="button" class="services__inner__gallery__buttons__button"
+                    <button type="button" class="services__inner__gallery__buttons__button" data-select_list
                         data-filter="bilbord">БИЛБОРДЫ-ПСКОВ</button>
-                    <button type="button" class="services__inner__gallery__buttons__button"
+                    <button type="button" class="services__inner__gallery__buttons__button" data-select_list
                         data-filter="big">СВЕТОДИОДНЫЙ ЭКРАН</button>
                 </div>
 
@@ -80,9 +78,7 @@ title: Разработка, изготовление и размещение н
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
 
-
                         <!-- Slides -->
-
 
                     </div>
                     <!-- If we need pagination -->
@@ -95,12 +91,13 @@ title: Разработка, изготовление и размещение н
                     <div class="swiper-button-next">
                         <img src="./assets/images/services/arrowright.svg" alt="arrow" data-arrow>
                     </div>
-
                 </div>
-
-
-
             </div>
+            <div class="services__inner__accordeon" data-arrow_rotate>
+                <span class="services__inner__accordeon__title">Адреса</span>
+                <button class="services__inner__accordeon__button"><img src="./assets/images/svg/ArrowDown.svg" alt="arrow"></button>
+            </div>
+            <ul class="services__inner__list" data-adress_list></ul>
         </div>
     </div>
 </section>
@@ -213,29 +210,29 @@ title: Разработка, изготовление и размещение н
                 <div class="form__row">
                     <label class="label__attention">
                         <input type="text" autocomplete="off" name="name" class="modalcallback__inner__input input__half input-name"
-                            id="name" data-validate-field="name" placeholder="Ваше имя" required>
+                            id="name"  placeholder="Ваше имя">
                     </label>
                     <label class="label__attention">
                         <input type="text" autocomplete="off" name="surname" class="modalcallback__inner__input input__half input-surname"
-                            id="surname" data-validate-field="surname" placeholder="Ваша фамилия" required>
+                            id="surname"  placeholder="Ваша фамилия">
                     </label>
                 </div>
                 <label class="label__attention">
                     <input type="tel" autocomplete="off" name="tel" class="modalcallback__inner__input input-tel"
-                        id="tel" data-validate-field="tel" placeholder="Ваш номер телефона" required>
+                        id="tel"  placeholder="Ваш номер телефона">
                 </label>
                 <label class="label__attention">
                     <input type="email" autocomplete="off" name="email" class="modalcallback__inner__input input-email"
-                        id="email" data-validate-field="emaol" placeholder="Ваша почта" required>
+                        id="email" placeholder="Ваша почта">
                 </label>
                 <span class="modalcallback__inner__selecting">Выберите подходящий способ связи</span>
 
                 <div class="modalcallback__inner__box">
                     <label for="call" class="modalcallback__inner__box__item">
-                        <input type="radio" id="call" name="callback" value="call"> Позвонить
+                        <input type="radio" autocomplete="off" id="call" name="callback" value="call" class="input-radiotel"> Позвонить
                     </label>
                     <label for="Email" class="modalcallback__inner__box__item">
-                        <input type="radio" id="Email" name="callback" value="Email"> Email
+                        <input type="radio" autocomplete="off" id="Email" name="callback" value="Email" class="input-radiomail"> Email
                     </label>
                 </div>
                 <button class="modalcallback__inner__form__button" type="submit">Отправить заявку</button>

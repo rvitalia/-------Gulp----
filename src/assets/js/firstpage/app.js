@@ -5,9 +5,10 @@ import { burger } from "./burger";
 import { loadData } from "./load&renderdata";
 import { modalCallCancel, modalCallOpen } from "./modal";
 import { doubleMapClick } from './doubleclick.js'
+import { showList } from "./accordon";
 
 
-export function swiperSlider() {
+export async function swiperSlider() {
     const swiper = new Swiper('.swiper__services', {
         // Optional parameters
         modules: [Navigation, Pagination],
@@ -50,12 +51,12 @@ export function swiperSlider() {
             else {
                 if (element.dataset.filter == 'bilbord') {
                     swiper.slideTo(0, 400, false);
-                    doubleMapClick('bilbord-all'); 
+                    doubleMapClick('bilbord-all');
                     coloractive('БИЛБОРДЫ-ПСКОВ');
                 }
                 else if (element.dataset.filter == 'city') {
                     swiper.slideTo(42, 400, false);
-                    doubleMapClick('city-format'); 
+                    doubleMapClick('city-format');
                     coloractive('СИТИ-ФОРМАТЫ');
                 }
                 else if (element.dataset.filter == 'big') {
@@ -64,7 +65,7 @@ export function swiperSlider() {
                 }
                 else if (element.dataset.filter == 'area') {
                     swiper.slideTo(34, 400, false);
-                    doubleMapClick('bilbord-area'); 
+                    doubleMapClick('bilbord-area');
                     coloractive('БИЛБОРДЫ-ОБЛАСТЬ');
                 }
             }
@@ -85,5 +86,5 @@ loadData();
 
 //отрисовываем точку на карте
 YmapsTotalInit();
-
-
+//запускаем лист отображения объектов на мобильной ориентации
+showList();

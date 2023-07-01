@@ -16,7 +16,7 @@ export function disabledactive(){
     });
 }
 
-export function activeTabs(){
+export async function activeTabs(){
     //убираем активный класс со всех табов
     disabledactive();
     //перебираем и сравниваем с названиями табов

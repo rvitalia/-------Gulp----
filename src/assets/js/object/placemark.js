@@ -89,7 +89,7 @@ export async function YmapsTotalInit() {
             myCollection.add(new ymaps.Placemark(array,
                 {
                     iconContent: title,
-                    balloonContentHeader: `<a href="object.php"><span id='${element.id}' style="display: block; max-width: 340px; ">${fullname}</span></a>`,
+                    balloonContentHeader: `<a  href="object.php" target="_blank"><span id='${element.id}' style="display: block; max-width: 340px; ">${fullname}</span></a>`,
                     balloonContentBody: `<img src="./assets/images/object/${element.foto2}" height="170" width="340">`,
                     balloonContentFooter: `<span style="display: block; max-width: 340px;"> ${(element.text)}</span>`,
                 },
@@ -97,7 +97,6 @@ export async function YmapsTotalInit() {
         });
 
         myCollection.events.add('click', function (event) {
-            console.log('Marker clicked');
             ballonClick(event);
         });
 
@@ -127,7 +126,7 @@ export async function YmapsTotalInit() {
                 myCollection.add(new ymaps.Placemark(array,
                     {
                         iconContent: title,
-                        balloonContentHeader: `<a href="object.php"><span id='${element.id}' style="display: block; max-width: 340px; ">${fullname}</span></a>`,
+                        balloonContentHeader: `<a  href="object.php" target="_blank"><span id='${element.id}' style="display: block; max-width: 340px; ">${fullname}</span></a>`,
                         balloonContentBody: `<img src="./assets/images/object/${element.foto2}" height="170" width="340">`,
                         balloonContentFooter: `<span style="display: block; max-width: 340px;"> ${(element.text)}</span>`,
                     },

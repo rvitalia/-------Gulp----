@@ -32,7 +32,6 @@ validation
     },
     {
       rule: 'required',
-      value: true,
       errorMessage: 'Введите имя!'
     }
   ])
@@ -47,14 +46,12 @@ validation
     },
     {
       rule: 'required',
-      value: true,
       errorMessage: 'Введите фамилию!'
     }
   ])
   .addField('.input-mail', [
     {
       rule: 'required',
-      value: true,
       errorMessage: 'Email обязателен',
     },
     {
@@ -66,7 +63,6 @@ validation
   .addField('.input-tel', [
     {
       rule: 'required',
-      value: true,
       errorMessage: 'Телефон обязателен',
     },
     {
@@ -82,16 +78,15 @@ validation
 
     let formData = new FormData(event.target);
 
-    console.log(...formData);
+    // console.log(...formData);
 
     let xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log('Отправлено');
-          alert('Форма успешно отправлена');
-          redirect();
+          // console.log('Отправлено');
+          alert('Форма успешно отправлена');        
         }
       }
     }
