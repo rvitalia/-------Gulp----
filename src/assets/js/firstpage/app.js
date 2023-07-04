@@ -32,39 +32,39 @@ export async function swiperSlider() {
             disabledactive();
             if (window.innerWidth >= 900) {
                 if (element.dataset.filter == 'bilbord') {
-                    swiper.slideTo(0, 400, false);
+                    swiper.slideTo(0, 800, false);
                     coloractive('БИЛБОРДЫ-ПСКОВ');
                 }
                 else if (element.dataset.filter == 'city') {
-                    swiper.slideTo(11, 400, false)
+                    swiper.slideTo(11, 800, false)
                     coloractive('СИТИ-ФОРМАТЫ');
                 }
                 else if (element.dataset.filter == 'big') {
-                    swiper.slideTo(15, 400, false);
+                    swiper.slideTo(15, 800, false);
                     coloractive('СВЕТОДИОДНЫЙ ЭКРАН');
                 }
                 else if (element.dataset.filter == 'area') {
-                    swiper.slideTo(8, 400, false);
+                    swiper.slideTo(8, 800, false);
                     coloractive('БИЛБОРДЫ-ОБЛАСТЬ');
                 }
             }
             else {
                 if (element.dataset.filter == 'bilbord') {
-                    swiper.slideTo(0, 400, false);
+                    swiper.slideTo(0, 800, false);
                     doubleMapClick('bilbord-all');
                     coloractive('БИЛБОРДЫ-ПСКОВ');
                 }
                 else if (element.dataset.filter == 'city') {
-                    swiper.slideTo(42, 400, false);
+                    swiper.slideTo(42, 800, false);
                     doubleMapClick('city-format');
                     coloractive('СИТИ-ФОРМАТЫ');
                 }
                 else if (element.dataset.filter == 'big') {
-                    swiper.slideTo(51, 400, false);
+                    swiper.slideTo(51, 800, false);
                     coloractive('СВЕТОДИОДНЫЙ ЭКРАН');
                 }
                 else if (element.dataset.filter == 'area') {
-                    swiper.slideTo(34, 400, false);
+                    swiper.slideTo(34, 800, false);
                     doubleMapClick('bilbord-area');
                     coloractive('БИЛБОРДЫ-ОБЛАСТЬ');
                 }

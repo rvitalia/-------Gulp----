@@ -8,7 +8,6 @@ export function sendData() {
             // event.preventDefault();
             let item = element.closest('.services__inner__gallery__list__category__item ');
             localStorage.setItem('id', JSON.stringify(item.id));
-            // console.log(item.id); 
         });
     });
 }
@@ -96,7 +95,7 @@ export async function renderDataobject(Id) {
                     <h2 class="object__inner__title">${currentObject.title}</h2>
                     <span class="object__inner__text">${currentObject.text}</span>
         
-                    <button type="button" class="object__inner__link" data-modalcallback>Связаться с нами</button>
+                    <button type="button" class="object__inner__link" data-modalcallback data-open="false">Связаться с нами</button>
                 </div>
             </div>
         </section>`;

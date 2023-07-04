@@ -1,8 +1,10 @@
 import { validation } from "./validation";
 
 export function modalCallOpen() {
-    function modalOpen() {
+    function modalOpen(button) {
         let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+
+
         const popuptel = document.querySelector('.modalcallback');
         const body = document.querySelector('body');
 
@@ -19,23 +21,32 @@ export function modalCallOpen() {
         setTimeout(function () {
             popuptel.style.opacity = '1';
         }, 400)
+
+        button.dataset.open = "true";
     }
 
     let buttonCallback = document.querySelectorAll('[data-modalcallback]');
+    
     buttonCallback.forEach(element => {
+        element.dataset.open = "false";
         element.addEventListener('click', () => {
-            modalOpen();
-            setTimeout(()=>{
-                //валидация и отправка на почту
-            validation();
-            },150);
+            if(element.dataset.open == "false"){
+                modalOpen(element);
+                setTimeout(()=>{
+                    //валидация и отправка на почту
+                validation();
+                },150);
+            }
+            else{
+                return
+            }
         })
     });
   
 }
 
 
-function removeClass(parent) {
+function removeClass(parent, button) {
     parent.style.opacity = '0';
     const body = document.querySelector('body');
     let fixwindow = document.querySelectorAll('.fix__block');
@@ -48,6 +59,17 @@ function removeClass(parent) {
         document.body.style.paddingRight = 0;
         body.classList.remove('_lock');
     }, 400)
+
+    button.dataset.open = "false";
+
+    //добавляем очистку всех сообщений об ошибке
+    let attentionLabels = document.querySelectorAll('.label__attention');
+    attentionLabels.forEach(element => {
+        let errorLabels = element.querySelectorAll('.just-validate-error-label');
+        errorLabels.forEach(item => {
+            item.parentNode.removeChild(item);
+        });
+    });
 }
 
 
@@ -57,7 +79,10 @@ export function modalCallCancel() {
     const cancel = document.querySelector('.modalcallback__close');
     const body = document.querySelector('body');
     cancel.addEventListener('click', () => {
-        removeClass(popuptel);
+        const currentButton = document.querySelector('[data-open="true"]');
+        if(currentButton){
+            removeClass(popuptel, currentButton);
+        }
     })
 }
 

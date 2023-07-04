@@ -2,6 +2,8 @@ import Inputmask from "inputmask";
 import JustValidate from "just-validate";
 
 
+
+
 export function validation() {
   const form = document.querySelector('.form');
   const telSelector = form.querySelector('input[type="tel"]');
@@ -11,9 +13,7 @@ export function validation() {
   let parentDiv = form.closest('.modalcallback');
   const close = parentDiv.querySelector('[data-close]');
   const buttonSent = parentDiv.querySelector('.modalcallback__inner__form__button');
-  buttonSent.addEventListener('click', (event => {
-    console.log(event);
-  }))
+ 
   const validation = new JustValidate('.form');
 
   validation
@@ -74,8 +74,14 @@ export function validation() {
         errorMessage: 'Введите корректный телефон',
       },
     ])
+    .onFail((event)=>{
+      buttonSent.disabled = true;
+      setTimeout(()=>{
+        buttonSent.disabled = false;
+      },500)
+    })
     .onSuccess((event) => {
-      //блокирумме кнопку на 5 секунд
+      //блокирумме кнопку 
       buttonSent.disabled = true;
       buttonSent.classList.add('disabled');
 
@@ -105,4 +111,32 @@ export function validation() {
       event.target.reset();
     });
 }
-//как перезагрузить страницу
+
+
+export function checkDublicate() {
+  let listLabels = document.querySelectorAll('.label__attention');
+
+  listLabels.forEach(element => {
+
+    // Создаем новый экземпляр наблюдателя MutationObserver
+    var observer = new MutationObserver(function (mutationsList, observer) {
+      // Перебираем все мутации (изменения) в списке мутаций
+      for (var mutation of mutationsList) {
+        // Перебираем все добавленные элементы в мутации
+        for (var addedNode of mutation.addedNodes) {
+          // Ваши действия с добавленными элементами здесь...
+          console.log("Добавлен элемент:", addedNode);
+        }
+      }
+    });
+
+    // Опции для наблюдателя мутаций (подробнее о них можно прочитать в документации)
+    var observerOptions = {
+      childList: true, // отслеживать добавление и удаление дочерних элементов
+      subtree: true // отслеживать все элементы внутри div, а не только непосредственные дети
+    };
+
+    // Начинаем отслеживать мутации элемента div с помощью созданного наблюдателя
+    observer.observe(element, observerOptions);
+  });
+}
